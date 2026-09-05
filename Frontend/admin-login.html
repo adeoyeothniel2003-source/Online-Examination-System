@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            Obafemi Awolowo University
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Student Login</a></li>
+            <li><a href="admin-login.html">Admin Login</a></li>
+        </ul>
+    </nav>
+    <!-- Admin Login -->
+    <main class="container">
+        <h1 class="page-title">
+            Admin Login
+        </h1>
+        <div class="card">
+            <form action="admin.html" method="get">
+                <label for="admin-email">
+                    Admin Email Address
+                </label>
+                <br>
+                <input
+                    type="email"
+                    id="admin-email"
+                    name="email"
+                    placeholder="Enter admin email"
+                    required
+                >
+                <br><br>
+                <label for="admin-password">
+                    Password
+                </label>
+                <br>
+                <input
+                    type="password"
+                    id="admin-password"
+                    name="password"
+                    placeholder="Enter admin password"
+                    required
+                >
+                <br><br>
+                <button type="submit"
+                        class="btn btn-primary">
+                    Login as Admin
+                </button>
+            </form>
+            <br>
+            <p>
+                <a href="login.html">
+                    Student Login
+                </a>
+            </p>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer>
+        <p>
+            Online Examination System
+        </p>
+    </footer>
+</body>
+</html>
