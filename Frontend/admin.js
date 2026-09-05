@@ -1,26 +1,28 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Get all admin dashboard buttons
-    const buttons = document.querySelectorAll(".admin-card .btn");
+    const manageExamsBtn = document.getElementById("manageExamsBtn");
+    const manageQuestionsBtn = document.getElementById("manageQuestionsBtn");
+    const viewStudentsBtn = document.getElementById("viewStudentsBtn");
+    const viewResultsBtn = document.getElementById("viewResultsBtn");
 
     // Manage Exams
-    buttons[0].addEventListener("click", function () {
-        alert("Manage Exams section will be available here.");
+    manageExamsBtn.addEventListener("click", function () {
+        alert("Manage Exams section selected.");
     });
 
     // Manage Questions
-    buttons[1].addEventListener("click", function () {
-        alert("Manage Questions section will be available here.");
+    manageQuestionsBtn.addEventListener("click", function () {
+        alert("Manage Questions section selected.");
     });
 
-    // View Students
-    buttons[2].addEventListener("click", function () {
-        alert("Student management section will be available here.");
+    // Students
+    viewStudentsBtn.addEventListener("click", function () {
+        alert("Students section selected.");
     });
 
-    // View Results
-    buttons[3].addEventListener("click", function () {
-        alert("Results section will be available here.");
+    // Results
+    viewResultsBtn.addEventListener("click", function () {
+        alert("Results section selected.");
     });
 
 });
