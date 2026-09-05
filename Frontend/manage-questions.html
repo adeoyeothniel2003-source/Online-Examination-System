@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en"> 
+ 
+<head> 
+ 
+    <meta charset="UTF-8"> 
+ 
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0" 
+    > 
+ 
+    <title>Manage Questions</title> 
+ 
+    <link rel="stylesheet" href="css/style.css"> 
+ 
+</head> 
+ 
+<body> 
+ 
+<div class="admin-container"> 
+ 
+    <!-- SIDEBAR --> 
+ 
+    <aside class="sidebar"> 
+ 
+        <h2>Admin CMS</h2> 
+ 
+        <a href="admin.html"> 
+            Dashboard 
+        </a> 
+ 
+        <a href="manage-exams.html"> 
+            Manage Exams 
+        </a> 
+ 
+        <a href="manage-questions.html" class="active"> 
+            Manage Questions 
+        </a> 
+ 
+        <a href="manage-students.html"> 
+            Students 
+        </a> 
+ 
+        <a href="manage-results.html"> 
+            Results 
+        </a> 
+ 
+        <a href="../index.html"> 
+            Logout 
+        </a> 
+ 
+    </aside> 
+ 
+ 
+    <!-- MAIN CONTENT --> 
+ 
+    <main class="main-content"> 
+ 
+        <div class="page-header"> 
+ 
+            <h1>Manage Questions</h1> 
+ 
+            <p> 
+                Add questions that will appear in an examination. 
+            </p> 
+ 
+        </div> 
+ 
+ 
+        <!-- ADD QUESTION FORM --> 
+ 
+        <div class="form-container"> 
+ 
+            <h2>Add Question</h2> 
+ 
+            <form id="questionForm"> 
+ 
+                <div class="form-group"> 
+ 
+                    <label for="questionExam"> 
+                        Examination 
+                    </label> 
+ 
+                    <select id="questionExam" required> 
+ 
+                        <option value=""> 
+                            Select Examination 
+                        </option> 
+ 
+                    </select> 
+ 
+                </div> 
+ 
+ 
+                <div class="form-group"> 
+ 
+                    <label for="questionText"> 
+                        Question 
+                    </label> 
+ 
+                    <textarea 
+                        id="questionText" 
+                        placeholder="Enter question" 
+                        required 
+                    ></textarea> 
+ 
+                </div> 
+ 
+ 
+                <!-- OPTIONS A AND B --> 
+ 
+                <div class="form-row"> 
+ 
+                    <div class="form-group"> 
+ 
+                        <label for="optionA"> 
+                            Option A 
+                        </label> 
+ 
+                        <input 
+                            type="text" 
+                            id="optionA" 
+                            placeholder="Enter option A" 
+                            required 
+                        > 
+ 
+                    </div> 
+ 
+ 
+                    <div class="form-group"> 
+ 
+                        <label for="optionB"> 
+                            Option B 
+                        </label> 
+ 
+                        <input 
+                            type="text" 
+                            id="optionB" 
+                            placeholder="Enter option B" 
+                            required 
+                        > 
+ 
+                    </div> 
+ 
+                </div> 
+ 
+ 
+                <!-- OPTIONS C AND D --> 
+ 
+                <div class="form-row"> 
+ 
+                    <div class="form-group"> 
+ 
+                        <label for="optionC"> 
+                            Option C 
+                        </label> 
+ 
+                        <input 
+                            type="text" 
+                            id="optionC" 
+                            placeholder="Enter option C" 
+                            required 
+                        > 
+ 
+                    </div> 
+ 
+ 
+                    <div class="form-group"> 
+ 
+                        <label for="optionD"> 
+                            Option D 
+                        </label> 
+ 
+                        <input 
+                            type="text" 
+                            id="optionD" 
+                            placeholder="Enter option D" 
+                            required 
+                        > 
+ 
+                    </div> 
+ 
+                </div> 
+ 
+ 
+                <!-- CORRECT ANSWER --> 
+ 
+                <div class="form-group"> 
+ 
+                    <label for="correctAnswer"> 
+                        Correct Answer 
+                    </label> 
+ 
+                    <select id="correctAnswer" required> 
+ 
+                        <option value=""> 
+                            Select Correct Answer 
+                        </option> 
+ 
+                        <option value="A"> 
+                            Option A 
+                        </option> 
+ 
+                        <option value="B"> 
+                            Option B 
+                        </option> 
+ 
+                        <option value="C"> 
+                            Option C 
+                        </option> 
+ 
+                        <option value="D"> 
+                            Option D 
+                        </option> 
+ 
+                    </select> 
+ 
+                </div> 
+ 
+ 
+                <button 
+                    type="submit" 
+                    class="btn btn-primary" 
+                > 
+                    Add Question 
+                </button> 
+ 
+            </form> 
+ 
+        </div> 
+ 
+ 
+        <!-- EXISTING QUESTIONS --> 
+ 
+        <div class="table-container"> 
+ 
+            <h2>Existing Questions</h2> 
+ 
+            <table> 
+ 
+                <thead> 
+ 
+                    <tr> 
+ 
+                        <th>Exam</th> 
+ 
+                        <th>Question</th> 
+ 
+                        <th>Correct Answer</th> 
+ 
+                        <th>Action</th> 
+ 
+                    </tr> 
+ 
+                </thead> 
+ 
+ 
+                <tbody id="questionTableBody"> 
+ 
+                </tbody> 
+ 
+            </table> 
+ 
+        </div> 
+ 
+    </main> 
+ 
+</div> 
+ 
+ 
+<!-- JAVASCRIPT --> 
+ 
+<script src="js/admin.js"></script> 
+ 
+</body> 
+ 
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Manage Results</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+<div class="admin-container">
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2>Admin CMS</h2>
+
+        <a href="admin.html">
+            Dashboard
+        </a>
+
+        <a href="manage-exams.html">
+            Manage Exams
+        </a>
+
+        <a href="manage-questions.html">
+            Manage Questions
+        </a>
+
+        <a href="manage-students.html">
+            Students
+        </a>
+
+        <a
+            href="manage-results.html"
+            class="active"
+        >
+            Results
+        </a>
+
+        <a href="../index.html">
+            Logout
+        </a>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+
+        <div class="page-header">
+
+            <h1>Manage Results</h1>
+
+            <p>
+                View examination results and student scores.
+            </p>
+
+        </div>
+
+
+        <div class="table-container">
+
+            <h2>Examination Results</h2>
+
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="resultSearch"
+                    placeholder="Search results..."
+                >
+
+            </div>
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Student</th>
+
+                        <th>Examination</th>
+
+                        <th>Score</th>
+
+                        <th>Percentage</th>
+
+                        <th>Date</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody id="resultTableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+ 
+<head> 
+ 
+    <meta charset="UTF-8"> 
+ 
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0" 
+    > 
+ 
+    <title>Manage Exams</title> 
+ 
+    <link rel="stylesheet" href="css/style.css"> 
+ 
+</head> 
+ 
+<body> 
+ 
+<div class="admin-container"> 
+ 
+    <!-- SIDEBAR --> 
+ 
+    <aside class="sidebar"> 
+ 
+        <h2>Admin CMS</h2> 
+ 
+        <a href="admin.html"> 
+            Dashboard 
+        </a> 
+ 
+        <a href="manage-exams.html" class="active"> 
+            Manage Exams 
+        </a> 
+ 
+        <a href="manage-questions.html"> 
+            Manage Questions 
+        </a> 
+ 
+        <a href="manage-students.html"> 
+            Students 
+        </a> 
+ 
+        <a href="manage-results.html"> 
+            Results 
+        </a> 
+ 
+        <a href="../index.html"> 
+            Logout 
+        </a> 
+ 
+    </aside> 
+ 
+ 
+    <!-- MAIN CONTENT --> 
+ 
+    <main class="main-content"> 
+ 
+        <div class="page-header"> 
+ 
+            <h1>Manage Exams</h1> 
+ 
+            <p> 
+                Create and manage examinations. 
+            </p> 
+ 
+        </div> 
+ 
+ 
+        <!-- ADD EXAMINATION --> 
+ 
+        <div class="form-container"> 
+ 
+            <h2>Add Examination</h2> 
+ 
+            <form id="examForm"> 
+ 
+                <div class="form-group"> 
+ 
+                    <label for="examName"> 
+                        Examination Name 
+                    </label> 
+ 
+                    <input 
+                        type="text" 
+                        id="examName" 
+                        placeholder="Enter examination name" 
+                        required 
+                    > 
+ 
+                </div> 
+ 
+ 
+                <div class="form-group"> 
+ 
+                    <label for="examCode"> 
+                        Examination Code 
+                    </label> 
+ 
+                    <input 
+                        type="text" 
+                        id="examCode" 
+                        placeholder="Enter examination code" 
+                        required 
+                    > 
+ 
+                </div> 
+ 
+ 
+                <div class="form-group"> 
+ 
+                    <label for="examDuration"> 
+                        Duration in Minutes 
+                    </label> 
+ 
+                    <input 
+                        type="number" 
+                        id="examDuration" 
+                        placeholder="Enter duration" 
+                        min="1" 
+                        required 
+                    > 
+ 
+                </div> 
+ 
+ 
+                <button 
+                    type="submit" 
+                    class="btn btn-primary" 
+                > 
+                    Add Examination 
+                </button> 
+ 
+            </form> 
+ 
+        </div> 
+ 
+ 
+        <!-- EXISTING EXAMINATIONS --> 
+ 
+        <div class="table-container"> 
+ 
+            <h2>Existing Examinations</h2> 
+ 
+            <br> 
+ 
+            <table> 
+ 
+                <thead> 
+ 
+                    <tr> 
+ 
+                        <th>Exam Code</th> 
+ 
+                        <th>Exam Name</th> 
+ 
+                        <th>Duration</th> 
+ 
+                        <th>Action</th> 
+ 
+                    </tr> 
+ 
+                </thead> 
+ 
+ 
+                <tbody id="examTableBody"> 
+ 
+                </tbody> 
+ 
+            </table> 
+ 
+        </div> 
+ 
+    </main> 
+ 
+</div> 
+ 
+ 
+<!-- JAVASCRIPT --> 
+ 
+<script src="js/admin.js"></script> 
+ 
+</body> 
+ 
+</html>
