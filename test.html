@@ -1,17 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Person 3 Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h2>Timer & Scoring Test</h2>
+    <div class="exam-container">
+        <header class="exam-header">
+            <h1>MATHEMATICS EXAM</h1>
+            <p class="student-name">Student: Aaliyah</p>
+        </header>
 
-  <p>Time left: <span id="timer">--:--</span></p>
+        <main class="exam-body">
+            <div class="question-counter">
+                <p>Question 1 of 20</p>
+            </div>
 
-  <button id="submitBtn">Submit Exam</button>
+            <section class="question-block">
+                <p class="question-text">1. What is the inverse of the function f(x) = 2x - 3?</p>
+                <form class="options">
+                    <label class="option">
+                        <input type="radio" name="question1" value="A">
+                        A. 2x + 3
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="question1" value="B">
+                        B. 2y + 3
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="question1" value="C">
+                        C. (x + 3)/2
+                    </label>
+                    <label class="option">
+                        <input type="radio" name="question1" value="D">
+                        D. (y + 3)/2
+                    </label>
+                </form>
+            </section>
 
-  <p id="resultDisplay"></p>
+            <div class="exam-navigation">
+                <button type="button" class="btn-prev">Previous</button>
+                <button type="button" class="btn-next">Next</button>
+            </div>
 
-  <script src="timer-scoring.js"></script>
+            <nav class="question-navigator">
+                <button type="button" class="nav-btn active">1</button>
+                <button type="button" class="nav-btn">2</button>
+                <button type="button" class="nav-btn">3</button>
+            </nav>
+
+            <div class="submit-wrapper">
+                <button type="button" class="btn-submit">Submit Exam</button>
+                <!-- ADDED: needed so students see a confirmation message after submitting -->
+                <p class="submit-status"></p>
+            </div>
+        </main>
+
+        <footer class="exam-timer-footer">
+            <div class="timer">
+                <span class="timer-label">Time Remaining</span>
+                <span class="timer-value">29:45</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="navigation.js"></script>
+    <script src="timer-scoring.js"></script>
 </body>
 </html>
