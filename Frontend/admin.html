@@ -14,25 +14,31 @@
 
 </head>
 
+
 <body>
 
-    <!-- Navigation Bar -->
+
+    <!-- ========================= -->
+    <!-- NAVIGATION BAR -->
+    <!-- ========================= -->
+
     <nav class="navbar">
 
         <div class="logo">
             Online Examination System
         </div>
 
+
         <ul class="nav-links">
 
             <li>
-                <a href="admin.html">
+                <a href="#" id="dashboardNavBtn">
                     Dashboard
                 </a>
             </li>
 
             <li>
-                <a href="index.html">
+                <a href="index.html" id="logoutBtn">
                     Logout
                 </a>
             </li>
@@ -42,7 +48,9 @@
     </nav>
 
 
+
     <main class="container">
+
 
         <!-- ========================= -->
         <!-- ADMIN DASHBOARD -->
@@ -50,15 +58,19 @@
 
         <div id="dashboardContent">
 
+
             <h1 class="page-title">
                 Admin Dashboard
             </h1>
 
 
-            <!-- Dashboard Cards -->
+            <!-- DASHBOARD CARDS -->
+
             <div class="admin-grid">
 
-                <!-- Manage Exams -->
+
+                <!-- MANAGE EXAMS -->
+
                 <div class="admin-card">
 
                     <h3>
@@ -66,13 +78,13 @@
                     </h3>
 
                     <p>
-                        Create, edit and delete examinations.
+                        Create, edit, delete and publish examinations.
                     </p>
 
                     <button
+                        type="button"
                         class="btn btn-primary"
-                        id="manageExamsBtn"
-                        type="button">
+                        id="manageExamsBtn">
 
                         Manage Exams
 
@@ -81,7 +93,9 @@
                 </div>
 
 
-                <!-- Manage Questions -->
+
+                <!-- MANAGE QUESTIONS -->
+
                 <div class="admin-card">
 
                     <h3>
@@ -89,13 +103,13 @@
                     </h3>
 
                     <p>
-                        Add and manage examination questions.
+                        Add, edit and manage examination questions.
                     </p>
 
                     <button
+                        type="button"
                         class="btn btn-primary"
-                        id="manageQuestionsBtn"
-                        type="button">
+                        id="manageQuestionsBtn">
 
                         Manage Questions
 
@@ -104,7 +118,9 @@
                 </div>
 
 
-                <!-- Students -->
+
+                <!-- STUDENTS -->
+
                 <div class="admin-card">
 
                     <h3>
@@ -112,13 +128,13 @@
                     </h3>
 
                     <p>
-                        View registered students.
+                        View and manage registered students.
                     </p>
 
                     <button
+                        type="button"
                         class="btn btn-primary"
-                        id="viewStudentsBtn"
-                        type="button">
+                        id="viewStudentsBtn">
 
                         View Students
 
@@ -127,7 +143,9 @@
                 </div>
 
 
-                <!-- Results -->
+
+                <!-- RESULTS -->
+
                 <div class="admin-card">
 
                     <h3>
@@ -135,13 +153,13 @@
                     </h3>
 
                     <p>
-                        View examination results.
+                        View examination results and performance.
                     </p>
 
                     <button
+                        type="button"
                         class="btn btn-primary"
-                        id="viewResultsBtn"
-                        type="button">
+                        id="viewResultsBtn">
 
                         View Results
 
@@ -149,20 +167,29 @@
 
                 </div>
 
+
             </div>
+
 
 
             <br>
 
 
-            <!-- Recent Examination Results -->
-            <div class="card" id="recentResultsSection">
+
+            <!-- RECENT RESULTS -->
+
+            <div
+                class="card"
+                id="recentResultsSection">
+
 
                 <h2>
                     Recent Examination Results
                 </h2>
 
+
                 <br>
+
 
                 <table>
 
@@ -195,76 +222,31 @@
                     </thead>
 
 
-                    <tbody>
-
-                        <tr>
-
-                            <td>
-                                Example Student
-                            </td>
-
-                            <td>
-                                Computer Science
-                            </td>
-
-                            <td>
-                                45/50
-                            </td>
-
-                            <td>
-                                90%
-                            </td>
-
-                            <td>
-                                Pass
-                            </td>
-
-                        </tr>
-
-
-                        <tr>
-
-                            <td>
-                                Example Student 2
-                            </td>
-
-                            <td>
-                                Mathematics
-                            </td>
-
-                            <td>
-                                32/50
-                            </td>
-
-                            <td>
-                                64%
-                            </td>
-
-                            <td>
-                                Pass
-                            </td>
-
-                        </tr>
+                    <tbody id="recentResultsBody">
 
                     </tbody>
 
                 </table>
 
+
             </div>
+
 
         </div>
 
 
+
         <!-- ========================= -->
-        <!-- MANAGE EXAMS SECTION -->
+        <!-- MANAGE EXAMS -->
         <!-- ========================= -->
 
         <section
             id="manageExamsSection"
             style="display: none;">
 
-            <!-- Manage Exams Header -->
+
             <div class="card">
+
 
                 <button
                     type="button"
@@ -275,18 +257,23 @@
 
                 </button>
 
+
                 <br>
                 <br>
+
 
                 <h2>
                     Manage Exams
                 </h2>
 
+
                 <p>
-                    Create, edit, delete and manage examinations.
+                    Create, edit, delete and publish examinations.
                 </p>
 
+
                 <br>
+
 
                 <button
                     type="button"
@@ -297,31 +284,35 @@
 
                 </button>
 
+
             </div>
 
 
-            <!-- Add/Edit Exam Form -->
+
+            <!-- EXAM FORM -->
+
             <div
                 class="card"
                 id="examFormContainer"
                 style="display: none;">
 
+
                 <h2 id="examFormTitle">
                     Add New Exam
                 </h2>
+
 
                 <br>
 
 
                 <form id="examForm">
 
-                    <!-- Hidden Exam ID -->
+
                     <input
                         type="hidden"
                         id="examId">
 
 
-                    <!-- Exam Title -->
                     <div style="margin-bottom: 15px;">
 
                         <label for="examTitle">
@@ -332,7 +323,9 @@
 
                         </label>
 
+
                         <br>
+
 
                         <input
                             type="text"
@@ -344,7 +337,7 @@
                     </div>
 
 
-                    <!-- Exam Description -->
+
                     <div style="margin-bottom: 15px;">
 
                         <label for="examDescription">
@@ -355,7 +348,9 @@
 
                         </label>
 
+
                         <br>
+
 
                         <textarea
                             id="examDescription"
@@ -366,7 +361,7 @@
                     </div>
 
 
-                    <!-- Exam Duration -->
+
                     <div style="margin-bottom: 15px;">
 
                         <label for="examDuration">
@@ -377,7 +372,9 @@
 
                         </label>
 
+
                         <br>
+
 
                         <input
                             type="number"
@@ -390,7 +387,7 @@
                     </div>
 
 
-                    <!-- Form Buttons -->
+
                     <button
                         type="submit"
                         class="btn btn-success">
@@ -409,22 +406,29 @@
 
                     </button>
 
+
                 </form>
+
 
             </div>
 
 
-            <!-- Exams List -->
+
+            <!-- EXAMS TABLE -->
+
             <div class="card">
+
 
                 <h2>
                     Examinations
                 </h2>
 
+
                 <br>
 
 
                 <table>
+
 
                     <thead>
 
@@ -453,32 +457,30 @@
 
                     <tbody id="examTableBody">
 
-                        <tr>
-
-                            <td colspan="4">
-                                No examinations added yet.
-                            </td>
-
-                        </tr>
-
                     </tbody>
+
 
                 </table>
 
+
             </div>
+
 
         </section>
 
-                <!-- ========================= -->
-        <!-- MANAGE QUESTIONS SECTION -->
+
+
+        <!-- ========================= -->
+        <!-- MANAGE QUESTIONS -->
         <!-- ========================= -->
 
         <section
             id="manageQuestionsSection"
             style="display: none;">
 
-            <!-- Manage Questions Header -->
+
             <div class="card">
+
 
                 <button
                     type="button"
@@ -489,28 +491,37 @@
 
                 </button>
 
+
                 <br>
                 <br>
+
 
                 <h2>
                     Manage Questions
                 </h2>
 
+
                 <p>
                     Add, edit and delete examination questions.
                 </p>
 
+
             </div>
 
 
-            <!-- Select Exam -->
+
+            <!-- SELECT EXAM -->
+
             <div class="card">
+
 
                 <h3>
                     Select Examination
                 </h3>
 
+
                 <br>
+
 
                 <select
                     id="questionExamSelect"
@@ -522,8 +533,10 @@
 
                 </select>
 
+
                 <br>
                 <br>
+
 
                 <button
                     type="button"
@@ -534,29 +547,36 @@
 
                 </button>
 
+
             </div>
 
 
-            <!-- Add/Edit Question Form -->
+
+            <!-- QUESTION FORM -->
+
             <div
                 class="card"
                 id="questionFormContainer"
                 style="display: none;">
 
+
                 <h2 id="questionFormTitle">
                     Add New Question
                 </h2>
 
+
                 <br>
 
+
                 <form id="questionForm">
+
 
                     <input
                         type="hidden"
                         id="questionId">
 
 
-                    <!-- Question Text -->
+
                     <div style="margin-bottom: 15px;">
 
                         <label for="questionText">
@@ -567,7 +587,9 @@
 
                         </label>
 
+
                         <br>
+
 
                         <textarea
                             id="questionText"
@@ -579,14 +601,16 @@
                     </div>
 
 
-                    <!-- Option A -->
+
                     <div style="margin-bottom: 15px;">
 
                         <label for="optionA">
                             <strong>Option A</strong>
                         </label>
 
+
                         <br>
+
 
                         <input
                             type="text"
@@ -598,14 +622,16 @@
                     </div>
 
 
-                    <!-- Option B -->
+
                     <div style="margin-bottom: 15px;">
 
                         <label for="optionB">
                             <strong>Option B</strong>
                         </label>
 
+
                         <br>
+
 
                         <input
                             type="text"
@@ -617,14 +643,16 @@
                     </div>
 
 
-                    <!-- Option C -->
+
                     <div style="margin-bottom: 15px;">
 
                         <label for="optionC">
                             <strong>Option C</strong>
                         </label>
 
+
                         <br>
+
 
                         <input
                             type="text"
@@ -636,14 +664,16 @@
                     </div>
 
 
-                    <!-- Option D -->
+
                     <div style="margin-bottom: 15px;">
 
                         <label for="optionD">
                             <strong>Option D</strong>
                         </label>
 
+
                         <br>
+
 
                         <input
                             type="text"
@@ -655,7 +685,7 @@
                     </div>
 
 
-                    <!-- Correct Answer -->
+
                     <div style="margin-bottom: 15px;">
 
                         <label for="correctAnswer">
@@ -666,7 +696,9 @@
 
                         </label>
 
+
                         <br>
+
 
                         <select
                             id="correctAnswer"
@@ -698,7 +730,7 @@
                     </div>
 
 
-                    <!-- Marks -->
+
                     <div style="margin-bottom: 15px;">
 
                         <label for="questionMarks">
@@ -709,7 +741,9 @@
 
                         </label>
 
+
                         <br>
+
 
                         <input
                             type="number"
@@ -720,6 +754,7 @@
                             style="width: 100%; max-width: 600px; padding: 10px; margin-top: 5px;">
 
                     </div>
+
 
 
                     <button
@@ -740,21 +775,29 @@
 
                     </button>
 
+
                 </form>
+
 
             </div>
 
 
-            <!-- Questions List -->
+
+            <!-- QUESTIONS TABLE -->
+
             <div class="card">
+
 
                 <h2>
                     Examination Questions
                 </h2>
 
+
                 <br>
 
+
                 <table>
+
 
                     <thead>
 
@@ -794,23 +837,232 @@
                         <tr>
 
                             <td colspan="6">
-                                Select an examination to view questions.
+
+                                Select an examination
+                                to view questions.
+
                             </td>
 
                         </tr>
 
                     </tbody>
 
+
                 </table>
+
 
             </div>
 
+
         </section>
+
+
+
+        <!-- ========================= -->
+        <!-- STUDENTS -->
+        <!-- ========================= -->
+
+        <section
+            id="studentsSection"
+            style="display: none;">
+
+
+            <div class="card">
+
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="backFromStudentsBtn">
+
+                    ← Back to Dashboard
+
+                </button>
+
+
+                <br>
+                <br>
+
+
+                <h2>
+                    Registered Students
+                </h2>
+
+
+                <p>
+                    View registered students.
+                </p>
+
+
+            </div>
+
+
+
+            <div class="card">
+
+
+                <input
+                    type="text"
+                    id="studentSearch"
+                    placeholder="Search students..."
+                    style="width: 100%; padding: 10px;">
+
+
+                <br>
+                <br>
+
+
+                <table>
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                ID
+                            </th>
+
+                            <th>
+                                Name
+                            </th>
+
+                            <th>
+                                Email
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="studentsTableBody">
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ========================= -->
+        <!-- RESULTS -->
+        <!-- ========================= -->
+
+        <section
+            id="resultsSection"
+            style="display: none;">
+
+
+            <div class="card">
+
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="backFromResultsBtn">
+
+                    ← Back to Dashboard
+
+                </button>
+
+
+                <br>
+                <br>
+
+
+                <h2>
+                    Examination Results
+                </h2>
+
+
+                <p>
+                    View student examination results.
+                </p>
+
+
+            </div>
+
+
+
+            <div class="card">
+
+
+                <input
+                    type="text"
+                    id="resultSearch"
+                    placeholder="Search results..."
+                    style="width: 100%; padding: 10px;">
+
+
+                <br>
+                <br>
+
+
+                <table>
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Student
+                            </th>
+
+                            <th>
+                                Exam
+                            </th>
+
+                            <th>
+                                Score
+                            </th>
+
+                            <th>
+                                Percentage
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="resultsTableBody">
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+        </section>
+
 
     </main>
 
 
-    <!-- Footer -->
+
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
     <footer>
 
         <p>
@@ -820,8 +1072,9 @@
     </footer>
 
 
-    <!-- Admin JavaScript -->
+
     <script src="admin.js"></script>
+
 
 </body>
 
