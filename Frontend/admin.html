@@ -469,6 +469,344 @@
 
         </section>
 
+                <!-- ========================= -->
+        <!-- MANAGE QUESTIONS SECTION -->
+        <!-- ========================= -->
+
+        <section
+            id="manageQuestionsSection"
+            style="display: none;">
+
+            <!-- Manage Questions Header -->
+            <div class="card">
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="backFromQuestionsBtn">
+
+                    ← Back to Dashboard
+
+                </button>
+
+                <br>
+                <br>
+
+                <h2>
+                    Manage Questions
+                </h2>
+
+                <p>
+                    Add, edit and delete examination questions.
+                </p>
+
+            </div>
+
+
+            <!-- Select Exam -->
+            <div class="card">
+
+                <h3>
+                    Select Examination
+                </h3>
+
+                <br>
+
+                <select
+                    id="questionExamSelect"
+                    style="width: 100%; max-width: 600px; padding: 10px;">
+
+                    <option value="">
+                        -- Select an Examination --
+                    </option>
+
+                </select>
+
+                <br>
+                <br>
+
+                <button
+                    type="button"
+                    class="btn btn-success"
+                    id="addQuestionBtn">
+
+                    + Add Question
+
+                </button>
+
+            </div>
+
+
+            <!-- Add/Edit Question Form -->
+            <div
+                class="card"
+                id="questionFormContainer"
+                style="display: none;">
+
+                <h2 id="questionFormTitle">
+                    Add New Question
+                </h2>
+
+                <br>
+
+                <form id="questionForm">
+
+                    <input
+                        type="hidden"
+                        id="questionId">
+
+
+                    <!-- Question Text -->
+                    <div style="margin-bottom: 15px;">
+
+                        <label for="questionText">
+
+                            <strong>
+                                Question
+                            </strong>
+
+                        </label>
+
+                        <br>
+
+                        <textarea
+                            id="questionText"
+                            rows="4"
+                            placeholder="Enter question"
+                            required
+                            style="width: 100%; padding: 10px; margin-top: 5px;"></textarea>
+
+                    </div>
+
+
+                    <!-- Option A -->
+                    <div style="margin-bottom: 15px;">
+
+                        <label for="optionA">
+                            <strong>Option A</strong>
+                        </label>
+
+                        <br>
+
+                        <input
+                            type="text"
+                            id="optionA"
+                            placeholder="Enter option A"
+                            required
+                            style="width: 100%; padding: 10px; margin-top: 5px;">
+
+                    </div>
+
+
+                    <!-- Option B -->
+                    <div style="margin-bottom: 15px;">
+
+                        <label for="optionB">
+                            <strong>Option B</strong>
+                        </label>
+
+                        <br>
+
+                        <input
+                            type="text"
+                            id="optionB"
+                            placeholder="Enter option B"
+                            required
+                            style="width: 100%; padding: 10px; margin-top: 5px;">
+
+                    </div>
+
+
+                    <!-- Option C -->
+                    <div style="margin-bottom: 15px;">
+
+                        <label for="optionC">
+                            <strong>Option C</strong>
+                        </label>
+
+                        <br>
+
+                        <input
+                            type="text"
+                            id="optionC"
+                            placeholder="Enter option C"
+                            required
+                            style="width: 100%; padding: 10px; margin-top: 5px;">
+
+                    </div>
+
+
+                    <!-- Option D -->
+                    <div style="margin-bottom: 15px;">
+
+                        <label for="optionD">
+                            <strong>Option D</strong>
+                        </label>
+
+                        <br>
+
+                        <input
+                            type="text"
+                            id="optionD"
+                            placeholder="Enter option D"
+                            required
+                            style="width: 100%; padding: 10px; margin-top: 5px;">
+
+                    </div>
+
+
+                    <!-- Correct Answer -->
+                    <div style="margin-bottom: 15px;">
+
+                        <label for="correctAnswer">
+
+                            <strong>
+                                Correct Answer
+                            </strong>
+
+                        </label>
+
+                        <br>
+
+                        <select
+                            id="correctAnswer"
+                            required
+                            style="width: 100%; max-width: 600px; padding: 10px; margin-top: 5px;">
+
+                            <option value="">
+                                -- Select Correct Answer --
+                            </option>
+
+                            <option value="A">
+                                A
+                            </option>
+
+                            <option value="B">
+                                B
+                            </option>
+
+                            <option value="C">
+                                C
+                            </option>
+
+                            <option value="D">
+                                D
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Marks -->
+                    <div style="margin-bottom: 15px;">
+
+                        <label for="questionMarks">
+
+                            <strong>
+                                Marks
+                            </strong>
+
+                        </label>
+
+                        <br>
+
+                        <input
+                            type="number"
+                            id="questionMarks"
+                            min="1"
+                            value="1"
+                            required
+                            style="width: 100%; max-width: 600px; padding: 10px; margin-top: 5px;">
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="btn btn-success">
+
+                        Save Question
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="btn btn-danger"
+                        id="cancelQuestionBtn">
+
+                        Cancel
+
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Questions List -->
+            <div class="card">
+
+                <h2>
+                    Examination Questions
+                </h2>
+
+                <br>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                #
+                            </th>
+
+                            <th>
+                                Question
+                            </th>
+
+                            <th>
+                                Options
+                            </th>
+
+                            <th>
+                                Correct Answer
+                            </th>
+
+                            <th>
+                                Marks
+                            </th>
+
+                            <th>
+                                Actions
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="questionTableBody">
+
+                        <tr>
+
+                            <td colspan="6">
+                                Select an examination to view questions.
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
     </main>
 
 
