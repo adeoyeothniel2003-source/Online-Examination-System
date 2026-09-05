@@ -16,6 +16,7 @@
 
 <body>
 
+    <!-- Navigation Bar -->
     <nav class="navbar">
 
         <div class="logo">
@@ -40,134 +41,246 @@
 
     </nav>
 
+
     <main class="container">
 
-        <h1 class="page-title">
-            Admin Dashboard
-        </h1>
+        <!-- ========================= -->
+        <!-- ADMIN DASHBOARD -->
+        <!-- ========================= -->
 
-        <div class="admin-grid">
+        <div id="dashboardContent">
 
-            <div class="admin-card">
+            <h1 class="page-title">
+                Admin Dashboard
+            </h1>
 
-                <h3>Manage Exams</h3>
 
-                <p>
-                    Create, edit and delete examinations.
-                </p>
+            <!-- Dashboard Cards -->
+            <div class="admin-grid">
 
-                <button class="btn btn-primary" id="manageExamsBtn">
-    Manage Exams
-</button>
+                <!-- Manage Exams -->
+                <div class="admin-card">
+
+                    <h3>
+                        Manage Exams
+                    </h3>
+
+                    <p>
+                        Create, edit and delete examinations.
+                    </p>
+
+                    <button
+                        class="btn btn-primary"
+                        id="manageExamsBtn"
+                        type="button">
+
+                        Manage Exams
+
+                    </button>
+
+                </div>
+
+
+                <!-- Manage Questions -->
+                <div class="admin-card">
+
+                    <h3>
+                        Manage Questions
+                    </h3>
+
+                    <p>
+                        Add and manage examination questions.
+                    </p>
+
+                    <button
+                        class="btn btn-primary"
+                        id="manageQuestionsBtn"
+                        type="button">
+
+                        Manage Questions
+
+                    </button>
+
+                </div>
+
+
+                <!-- Students -->
+                <div class="admin-card">
+
+                    <h3>
+                        Students
+                    </h3>
+
+                    <p>
+                        View registered students.
+                    </p>
+
+                    <button
+                        class="btn btn-primary"
+                        id="viewStudentsBtn"
+                        type="button">
+
+                        View Students
+
+                    </button>
+
+                </div>
+
+
+                <!-- Results -->
+                <div class="admin-card">
+
+                    <h3>
+                        Results
+                    </h3>
+
+                    <p>
+                        View examination results.
+                    </p>
+
+                    <button
+                        class="btn btn-primary"
+                        id="viewResultsBtn"
+                        type="button">
+
+                        View Results
+
+                    </button>
+
+                </div>
 
             </div>
 
-            <div class="admin-card">
 
-                <h3>Manage Questions</h3>
+            <br>
 
-                <p>
-                    Add and manage examination questions.
-                </p>
 
-             <button class="btn btn-primary" id="manageQuestionsBtn">
-    Manage Questions
-</button>
+            <!-- Recent Examination Results -->
+            <div class="card" id="recentResultsSection">
 
-            </div>
+                <h2>
+                    Recent Examination Results
+                </h2>
 
-            <div class="admin-card">
+                <br>
 
-                <h3>Students</h3>
+                <table>
 
-                <p>
-                    View registered students.
-                </p>
+                    <thead>
 
-                <button class="btn btn-primary" id="viewStudentsBtn">
-    View Students
-</button>
+                        <tr>
 
-            </div>
+                            <th>
+                                Student
+                            </th>
 
-            <div class="admin-card">
+                            <th>
+                                Exam
+                            </th>
 
-                <h3>Results</h3>
+                            <th>
+                                Score
+                            </th>
 
-                <p>
-                    View examination results.
-                </p>
+                            <th>
+                                Percentage
+                            </th>
 
-                <button class="btn btn-primary" id="viewResultsBtn">
-    View Results
-</button>
+                            <th>
+                                Status
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                Example Student
+                            </td>
+
+                            <td>
+                                Computer Science
+                            </td>
+
+                            <td>
+                                45/50
+                            </td>
+
+                            <td>
+                                90%
+                            </td>
+
+                            <td>
+                                Pass
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Example Student 2
+                            </td>
+
+                            <td>
+                                Mathematics
+                            </td>
+
+                            <td>
+                                32/50
+                            </td>
+
+                            <td>
+                                64%
+                            </td>
+
+                            <td>
+                                Pass
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
 
             </div>
 
         </div>
 
-        <br>
 
-        <div class="card">
+        <!-- ========================= -->
+        <!-- MANAGE EXAMS SECTION -->
+        <!-- ========================= -->
 
-            <h2>
-                Recent Examination Results
-            </h2>
+        <section
+            id="manageExamsSection"
+            style="display: none;">
 
-            <br>
-
-            <table>
-
-                <thead>
-
-                    <tr>
-                        <th>Student</th>
-                        <th>Exam</th>
-                        <th>Score</th>
-                        <th>Percentage</th>
-                        <th>Status</th>
-                    </tr>
-
-                </thead>
-
-                <tbody>
-
-                    <tr>
-                        <td>Example Student</td>
-                        <td>Computer Science</td>
-                        <td>45/50</td>
-                        <td>90%</td>
-                        <td>Pass</td>
-                    </tr>
-
-                    <tr>
-                        <td>Example Student 2</td>
-                        <td>Mathematics</td>
-                        <td>32/50</td>
-                        <td>64%</td>
-                        <td>Pass</td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-                <!-- Manage Exams Section -->
-        <section id="manageExamsSection" style="display: none;">
-
+            <!-- Manage Exams Header -->
             <div class="card">
 
                 <button
                     type="button"
                     class="btn btn-primary"
-                    id="backToDashboardBtn"
-                >
+                    id="backToDashboardBtn">
+
                     ← Back to Dashboard
+
                 </button>
 
-                <br><br>
+                <br>
+                <br>
 
-                <h2>Manage Exams</h2>
+                <h2>
+                    Manage Exams
+                </h2>
 
                 <p>
                     Create, edit, delete and manage examinations.
@@ -178,19 +291,20 @@
                 <button
                     type="button"
                     class="btn btn-success"
-                    id="addExamBtn"
-                >
+                    id="addExamBtn">
+
                     + Add New Exam
+
                 </button>
 
             </div>
 
-            <!-- Add Exam Form -->
+
+            <!-- Add/Edit Exam Form -->
             <div
                 class="card"
                 id="examFormContainer"
-                style="display: none;"
-            >
+                style="display: none;">
 
                 <h2 id="examFormTitle">
                     Add New Exam
@@ -198,49 +312,72 @@
 
                 <br>
 
+
                 <form id="examForm">
 
+                    <!-- Hidden Exam ID -->
                     <input
                         type="hidden"
-                        id="examId"
-                    >
+                        id="examId">
 
+
+                    <!-- Exam Title -->
                     <div style="margin-bottom: 15px;">
 
                         <label for="examTitle">
-                            <strong>Exam Title</strong>
+
+                            <strong>
+                                Exam Title
+                            </strong>
+
                         </label>
+
+                        <br>
 
                         <input
                             type="text"
                             id="examTitle"
                             placeholder="Enter exam title"
                             required
-                            style="width: 100%; padding: 10px; margin-top: 5px;"
-                        >
+                            style="width: 100%; padding: 10px; margin-top: 5px;">
 
                     </div>
 
+
+                    <!-- Exam Description -->
                     <div style="margin-bottom: 15px;">
 
                         <label for="examDescription">
-                            <strong>Description</strong>
+
+                            <strong>
+                                Description
+                            </strong>
+
                         </label>
+
+                        <br>
 
                         <textarea
                             id="examDescription"
                             rows="4"
                             placeholder="Enter exam description"
-                            style="width: 100%; padding: 10px; margin-top: 5px;"
-                        ></textarea>
+                            style="width: 100%; padding: 10px; margin-top: 5px;"></textarea>
 
                     </div>
 
+
+                    <!-- Exam Duration -->
                     <div style="margin-bottom: 15px;">
 
                         <label for="examDuration">
-                            <strong>Duration (minutes)</strong>
+
+                            <strong>
+                                Duration (minutes)
+                            </strong>
+
                         </label>
+
+                        <br>
 
                         <input
                             type="number"
@@ -248,56 +385,80 @@
                             min="1"
                             placeholder="e.g. 30"
                             required
-                            style="width: 100%; padding: 10px; margin-top: 5px;"
-                        >
+                            style="width: 100%; padding: 10px; margin-top: 5px;">
 
                     </div>
 
+
+                    <!-- Form Buttons -->
                     <button
                         type="submit"
-                        class="btn btn-success"
-                    >
+                        class="btn btn-success">
+
                         Save Exam
+
                     </button>
+
 
                     <button
                         type="button"
                         class="btn btn-danger"
-                        id="cancelExamBtn"
-                    >
+                        id="cancelExamBtn">
+
                         Cancel
+
                     </button>
 
                 </form>
 
             </div>
 
+
             <!-- Exams List -->
             <div class="card">
 
-                <h2>Examinations</h2>
+                <h2>
+                    Examinations
+                </h2>
 
                 <br>
+
 
                 <table>
 
                     <thead>
 
                         <tr>
-                            <th>Exam</th>
-                            <th>Duration</th>
-                            <th>Status</th>
-                            <th>Actions</th>
+
+                            <th>
+                                Exam
+                            </th>
+
+                            <th>
+                                Duration
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Actions
+                            </th>
+
                         </tr>
 
                     </thead>
 
+
                     <tbody id="examTableBody">
 
                         <tr>
+
                             <td colspan="4">
                                 No examinations added yet.
                             </td>
+
                         </tr>
 
                     </tbody>
@@ -306,10 +467,12 @@
 
             </div>
 
-        
+        </section>
 
     </main>
 
+
+    <!-- Footer -->
     <footer>
 
         <p>
@@ -318,6 +481,8 @@
 
     </footer>
 
+
+    <!-- Admin JavaScript -->
     <script src="admin.js"></script>
 
 </body>
