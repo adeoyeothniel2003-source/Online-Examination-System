@@ -234,14 +234,14 @@ footer {
 .exam-navigation {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    margin-top: 25px;
+    gap: 60px;
+    margin-top: 30px;
 }
 
 .question-navigator {
     display: flex;
     justify-content: center;
-    gap: 12px;
+    gap: 25px;
     flex-wrap: wrap;
-    margin-top: 25px;
+    margin-top:35px;
 }
