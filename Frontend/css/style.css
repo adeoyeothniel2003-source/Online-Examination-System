@@ -226,3 +226,46 @@ footer {
         min-height: 42px;
     }
 }
+
+#manageExamsSection {
+    width: 100%;
+    margin-top: 30px;
+}
+
+#manageExamsSection .card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+#manageExamsSection h2 {
+    color: #12355b;
+    margin-bottom: 10px;
+}
+
+#manageExamsSection h3 {
+    color: #12355b;
+    margin-bottom: 10px;
+}
+
+#manageExamsSection input,
+#manageExamsSection textarea {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+}
+
+#manageExamsSection textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#manageExamsSection table {
+    width: 100%;
+    margin-top: 15px;
+}
