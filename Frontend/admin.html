@@ -153,6 +153,112 @@
             </table>
 
         </div>
+                <!-- Manage Exams Section -->
+        <div class="card">
+
+            <h2>Manage Exams</h2>
+
+            <br>
+
+            <button type="button" class="btn btn-primary" id="showExamFormBtn">
+                Add New Exam
+            </button>
+
+            <!-- Add/Edit Exam Form -->
+            <div id="examFormContainer" style="display: none; margin-top: 20px;">
+
+                <form id="examForm">
+
+                    <input type="hidden" id="examId">
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="examTitle">
+                            <strong>Exam Title</strong>
+                        </label>
+
+                        <input
+                            type="text"
+                            id="examTitle"
+                            placeholder="Enter exam title"
+                            required
+                            style="width: 100%; padding: 10px; margin-top: 5px;"
+                        >
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="examDescription">
+                            <strong>Description</strong>
+                        </label>
+
+                        <textarea
+                            id="examDescription"
+                            placeholder="Enter exam description"
+                            rows="4"
+                            style="width: 100%; padding: 10px; margin-top: 5px;"
+                        ></textarea>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label for="examDuration">
+                            <strong>Duration (minutes)</strong>
+                        </label>
+
+                        <input
+                            type="number"
+                            id="examDuration"
+                            placeholder="e.g. 30"
+                            min="1"
+                            required
+                            style="width: 100%; padding: 10px; margin-top: 5px;"
+                        >
+                    </div>
+
+                    <button type="submit" class="btn btn-success">
+                        Save Exam
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-danger"
+                        id="cancelExamBtn"
+                    >
+                        Cancel
+                    </button>
+
+                </form>
+
+            </div>
+
+            <br><br>
+
+            <!-- Exams Table -->
+            <h3>Examinations</h3>
+
+            <br>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Exam</th>
+                        <th>Duration</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="examTableBody">
+
+                    <!-- Exams will be added here by JavaScript -->
+
+                </tbody>
+
+            </table>
+
+        </div>
+        
 
     </main>
 
