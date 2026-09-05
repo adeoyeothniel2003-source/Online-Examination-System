@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+
+        <div class="logo">
+            Online Examination System
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="login.html">Logout</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- Main Dashboard -->
+    <main class="container">
+
+        <!-- Welcome Section -->
+        <div class="card">
+
+            <h1 class="page-title">
+                Student Dashboard
+            </h1>
+
+            <h2>
+                Welcome, Student
+            </h2>
+
+            <p>
+                Student ID: OAU/2023/0000
+            </p>
+
+            <p>
+                From your dashboard, you can view available examinations
+                and check your previous results.
+            </p>
+
+        </div>
+
+
+        <!-- Available Examinations -->
+        <div class="card">
+
+            <h2>
+                Available Examinations
+            </h2>
+
+            <br>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Examination</th>
+                        <th>Course</th>
+                        <th>Duration</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            Software Engineering
+                        </td>
+
+                        <td>
+                            SEN 214
+                        </td>
+
+                        <td>
+                            30 Minutes
+                        </td>
+
+                        <td>
+                            <a href="exam.html"
+                               class="btn btn-success">
+                                Start Exam
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Database Systems
+                        </td>
+
+                        <td>
+                            SEN 216
+                        </td>
+
+                        <td>
+                            45 Minutes
+                        </td>
+
+                        <td>
+                            <a href="exam.html"
+                               class="btn btn-success">
+                                Start Exam
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Web Development
+                        </td>
+
+                        <td>
+                            SEN 218
+                        </td>
+
+                        <td>
+                            30 Minutes
+                        </td>
+
+                        <td>
+                            <a href="exam.html"
+                               class="btn btn-success">
+                                Start Exam
+                            </a>
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- Previous Results -->
+        <div class="card">
+
+            <h2>
+                Previous Results
+            </h2>
+
+            <br>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Examination</th>
+                        <th>Score</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+                            Introduction to Programming
+                        </td>
+
+                        <td>
+                            75%
+                        </td>
+
+                        <td>
+
+                            <span class="status status-pass">
+                                Passed
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <a href="result.html"
+                               class="btn btn-primary">
+                                View Result
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            Computer Fundamentals
+                        </td>
+
+                        <td>
+                            62%
+                        </td>
+
+                        <td>
+
+                            <span class="status status-pass">
+                                Passed
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <a href="result.html"
+                               class="btn btn-primary">
+                                View Result
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- Student Information -->
+        <div class="card">
+
+            <h2>
+                Student Information
+            </h2>
+
+            <br>
+
+            <p>
+                <strong>Name:</strong>
+                Student Name
+            </p>
+
+            <p>
+                <strong>Student ID:</strong>
+                OAU/2023/0000
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                student@example.com
+            </p>
+
+            <p>
+                <strong>Department:</strong>
+                Software Engineering
+            </p>
+
+        </div>
+
+
+        <!-- Logout -->
+        <div style="text-align: center; margin-top: 25px;">
+
+            <a href="login.html"
+               class="btn btn-danger">
+                Logout
+            </a>
+
+        </div>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            Online Examination System
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
