@@ -2,25 +2,19 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Admin Dashboard</title>
 
     <link rel="stylesheet" href="css/style.css">
-
 </head>
-
 
 <body>
 
-
-    <!-- ========================= -->
-    <!-- NAVIGATION BAR -->
-    <!-- ========================= -->
+    <!-- =========================
+         NAVBAR
+    ========================== -->
 
     <nav class="navbar">
 
@@ -28,17 +22,16 @@
             Online Examination System
         </div>
 
-
         <ul class="nav-links">
 
             <li>
-                <a href="#" id="dashboardNavBtn">
+                <a href="#" id="dashboardBtn">
                     Dashboard
                 </a>
             </li>
 
             <li>
-                <a href="index.html" id="logoutBtn">
+                <a href="admin-login.html" id="logoutBtn">
                     Logout
                 </a>
             </li>
@@ -48,665 +41,479 @@
     </nav>
 
 
+    <!-- =========================
+         DASHBOARD
+    ========================== -->
 
-    <main class="container">
+    <main class="container" id="dashboardContent">
 
-
-        <!-- ========================= -->
-        <!-- ADMIN DASHBOARD -->
-        <!-- ========================= -->
-
-        <div id="dashboardContent">
-
-
-            <h1 class="page-title">
-                Admin Dashboard
-            </h1>
+        <h1 class="page-title">
+            Admin Dashboard
+        </h1>
 
 
-            <!-- DASHBOARD CARDS -->
+        <!-- MANAGEMENT CARDS -->
 
-            <div class="admin-grid">
-
-
-                <!-- MANAGE EXAMS -->
-
-                <div class="admin-card">
-
-                    <h3>
-                        Manage Exams
-                    </h3>
-
-                    <p>
-                        Create, edit, delete and publish examinations.
-                    </p>
-
-                    <button
-                        type="button"
-                        class="btn btn-primary"
-                        id="manageExamsBtn">
-
-                        Manage Exams
-
-                    </button>
-
-                </div>
+        <div class="admin-grid">
 
 
+            <!-- MANAGE EXAMS -->
 
-                <!-- MANAGE QUESTIONS -->
+            <div class="admin-card">
 
-                <div class="admin-card">
+                <h3>
+                    Manage Exams
+                </h3>
 
-                    <h3>
-                        Manage Questions
-                    </h3>
+                <p>
+                    Add, edit, delete and publish examinations.
+                </p>
 
-                    <p>
-                        Add, edit and manage examination questions.
-                    </p>
+                <button
+                    class="btn btn-primary"
+                    id="manageExamsBtn">
 
-                    <button
-                        type="button"
-                        class="btn btn-primary"
-                        id="manageQuestionsBtn">
+                    Manage Exams
 
-                        Manage Questions
-
-                    </button>
-
-                </div>
-
-
-
-                <!-- STUDENTS -->
-
-                <div class="admin-card">
-
-                    <h3>
-                        Students
-                    </h3>
-
-                    <p>
-                        View and manage registered students.
-                    </p>
-
-                    <button
-                        type="button"
-                        class="btn btn-primary"
-                        id="viewStudentsBtn">
-
-                        View Students
-
-                    </button>
-
-                </div>
-
-
-
-                <!-- RESULTS -->
-
-                <div class="admin-card">
-
-                    <h3>
-                        Results
-                    </h3>
-
-                    <p>
-                        View examination results and performance.
-                    </p>
-
-                    <button
-                        type="button"
-                        class="btn btn-primary"
-                        id="viewResultsBtn">
-
-                        View Results
-
-                    </button>
-
-                </div>
-
+                </button>
 
             </div>
 
 
+            <!-- MANAGE QUESTIONS -->
 
-            <br>
+            <div class="admin-card">
 
+                <h3>
+                    Manage Questions
+                </h3>
 
+                <p>
+                    Add and manage questions for examinations.
+                </p>
 
-            <!-- RECENT RESULTS -->
+                <button
+                    class="btn btn-primary"
+                    id="manageQuestionsBtn">
 
-            <div
-                class="card"
-                id="recentResultsSection">
+                    Manage Questions
 
-
-                <h2>
-                    Recent Examination Results
-                </h2>
-
-
-                <br>
-
-
-                <table>
-
-                    <thead>
-
-                        <tr>
-
-                            <th>
-                                Student
-                            </th>
-
-                            <th>
-                                Exam
-                            </th>
-
-                            <th>
-                                Score
-                            </th>
-
-                            <th>
-                                Percentage
-                            </th>
-
-                            <th>
-                                Status
-                            </th>
-
-                        </tr>
-
-                    </thead>
-
-
-                    <tbody id="recentResultsBody">
-
-                    </tbody>
-
-                </table>
-
+                </button>
 
             </div>
 
+
+            <!-- STUDENTS -->
+
+            <div class="admin-card">
+
+                <h3>
+                    Students
+                </h3>
+
+                <p>
+                    Register and manage students.
+                </p>
+
+                <button
+                    class="btn btn-primary"
+                    id="viewStudentsBtn">
+
+                    Students
+
+                </button>
+
+            </div>
+
+
+            <!-- RESULTS -->
+
+            <div class="admin-card">
+
+                <h3>
+                    Results
+                </h3>
+
+                <p>
+                    View examination results.
+                </p>
+
+                <button
+                    class="btn btn-primary"
+                    id="viewResultsBtn">
+
+                    View Results
+
+                </button>
+
+            </div>
+
+
+            <!-- EXAM REGISTRATION -->
+
+            <div class="admin-card">
+
+                <h3>
+                    Exam Registration
+                </h3>
+
+                <p>
+                    Assign examinations to registered students.
+                </p>
+
+                <button
+                    class="btn btn-primary"
+                    id="examRegistrationBtn">
+
+                    Exam Registration
+
+                </button>
+
+            </div>
 
         </div>
 
 
+        <!-- =========================
+             RECENT RESULTS
+        ========================== -->
 
-        <!-- ========================= -->
-        <!-- MANAGE EXAMS -->
-        <!-- ========================= -->
+        <section class="card">
 
-        <section
-            id="manageExamsSection"
-            style="display: none;">
+            <h2>
+                Recent Examination Results
+            </h2>
 
+            <br>
 
-            <div class="card">
+            <table>
 
+                <thead>
 
-                <button
-                    type="button"
-                    class="btn btn-primary"
-                    id="backToDashboardBtn">
+                    <tr>
 
-                    ← Back to Dashboard
+                        <th>
+                            Student
+                        </th>
 
-                </button>
+                        <th>
+                            Exam
+                        </th>
 
+                        <th>
+                            Score
+                        </th>
 
-                <br>
-                <br>
+                        <th>
+                            Status
+                        </th>
 
+                    </tr>
 
-                <h2>
-                    Manage Exams
-                </h2>
+                </thead>
 
+                <tbody id="recentResultsBody">
 
-                <p>
-                    Create, edit, delete and publish examinations.
-                </p>
+                </tbody>
 
+            </table>
 
-                <br>
+        </section>
 
-
-                <button
-                    type="button"
-                    class="btn btn-success"
-                    id="addExamBtn">
-
-                    + Add New Exam
-
-                </button>
+    </main>
 
 
-            </div>
+    <!-- =========================
+         MANAGE EXAMS
+    ========================== -->
 
+    <section
+        class="container"
+        id="manageExamsSection"
+        style="display: none;">
+
+        <div class="card">
+
+            <button
+                class="btn btn-primary"
+                id="backToDashboardBtn">
+
+                ← Back to Dashboard
+
+            </button>
+
+            <h1 class="page-title">
+                Manage Exams
+            </h1>
+
+
+            <button
+                class="btn btn-success"
+                id="addExamBtn">
+
+                + Add New Exam
+
+            </button>
 
 
             <!-- EXAM FORM -->
 
             <div
-                class="card"
                 id="examFormContainer"
-                style="display: none;">
+                style="display: none; margin-top: 20px;">
 
+                <div class="card">
 
-                <h2 id="examFormTitle">
-                    Add New Exam
-                </h2>
+                    <h3 id="examFormTitle">
+                        Add New Exam
+                    </h3>
 
+                    <br>
 
-                <br>
+                    <form id="examForm">
 
+                        <input
+                            type="hidden"
+                            id="examId">
 
-                <form id="examForm">
-
-
-                    <input
-                        type="hidden"
-                        id="examId">
-
-
-                    <div style="margin-bottom: 15px;">
 
                         <label for="examTitle">
-
-                            <strong>
-                                Exam Title
-                            </strong>
-
+                            Exam Title
                         </label>
-
-
-                        <br>
-
 
                         <input
                             type="text"
                             id="examTitle"
-                            placeholder="Enter exam title"
                             required
-                            style="width: 100%; padding: 10px; margin-top: 5px;">
+                            style="width: 100%; padding: 10px; margin: 8px 0 15px;">
 
-                    </div>
-
-
-
-                    <div style="margin-bottom: 15px;">
 
                         <label for="examDescription">
-
-                            <strong>
-                                Description
-                            </strong>
-
+                            Description
                         </label>
-
-
-                        <br>
-
 
                         <textarea
                             id="examDescription"
-                            rows="4"
-                            placeholder="Enter exam description"
-                            style="width: 100%; padding: 10px; margin-top: 5px;"></textarea>
+                            required
+                            style="width: 100%; padding: 10px; margin: 8px 0 15px;"></textarea>
 
-                    </div>
-
-
-
-                    <div style="margin-bottom: 15px;">
 
                         <label for="examDuration">
-
-                            <strong>
-                                Duration (minutes)
-                            </strong>
-
+                            Duration (Minutes)
                         </label>
-
-
-                        <br>
-
 
                         <input
                             type="number"
                             id="examDuration"
                             min="1"
-                            placeholder="e.g. 30"
                             required
-                            style="width: 100%; padding: 10px; margin-top: 5px;">
-
-                    </div>
+                            style="width: 100%; padding: 10px; margin: 8px 0 15px;">
 
 
+                        <button
+                            type="submit"
+                            class="btn btn-success">
 
-                    <button
-                        type="submit"
-                        class="btn btn-success">
+                            Save Exam
 
-                        Save Exam
+                        </button>
 
-                    </button>
+                        <button
+                            type="button"
+                            class="btn btn-danger"
+                            id="cancelExamBtn">
 
+                            Cancel
 
-                    <button
-                        type="button"
-                        class="btn btn-danger"
-                        id="cancelExamBtn">
+                        </button>
 
-                        Cancel
+                    </form>
 
-                    </button>
-
-
-                </form>
-
+                </div>
 
             </div>
 
+
+            <br>
 
 
             <!-- EXAMS TABLE -->
 
-            <div class="card">
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Title
+                        </th>
+
+                        <th>
+                            Description
+                        </th>
+
+                        <th>
+                            Duration
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Actions
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="examTableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
 
 
-                <h2>
-                    Examinations
-                </h2>
+    <!-- =========================
+         MANAGE QUESTIONS
+    ========================== -->
+
+    <section
+        class="container"
+        id="manageQuestionsSection"
+        style="display: none;">
+
+        <div class="card">
+
+            <button
+                class="btn btn-primary"
+                id="backFromQuestionsBtn">
+
+                ← Back to Dashboard
+
+            </button>
+
+            <h1 class="page-title">
+                Manage Questions
+            </h1>
 
 
-                <br>
+            <label for="questionExamSelect">
+                Select Exam
+            </label>
+
+            <select
+                id="questionExamSelect"
+                style="width: 100%; padding: 10px; margin: 10px 0 20px;">
+
+                <option value="">
+                    Select an exam
+                </option>
+
+            </select>
 
 
-                <table>
+            <button
+                class="btn btn-success"
+                id="addQuestionBtn">
 
+                + Add Question
 
-                    <thead>
-
-                        <tr>
-
-                            <th>
-                                Exam
-                            </th>
-
-                            <th>
-                                Duration
-                            </th>
-
-                            <th>
-                                Status
-                            </th>
-
-                            <th>
-                                Actions
-                            </th>
-
-                        </tr>
-
-                    </thead>
-
-
-                    <tbody id="examTableBody">
-
-                    </tbody>
-
-
-                </table>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- ========================= -->
-        <!-- MANAGE QUESTIONS -->
-        <!-- ========================= -->
-
-        <section
-            id="manageQuestionsSection"
-            style="display: none;">
-
-
-            <div class="card">
-
-
-                <button
-                    type="button"
-                    class="btn btn-primary"
-                    id="backFromQuestionsBtn">
-
-                    ← Back to Dashboard
-
-                </button>
-
-
-                <br>
-                <br>
-
-
-                <h2>
-                    Manage Questions
-                </h2>
-
-
-                <p>
-                    Add, edit and delete examination questions.
-                </p>
-
-
-            </div>
-
-
-
-            <!-- SELECT EXAM -->
-
-            <div class="card">
-
-
-                <h3>
-                    Select Examination
-                </h3>
-
-
-                <br>
-
-
-                <select
-                    id="questionExamSelect"
-                    style="width: 100%; max-width: 600px; padding: 10px;">
-
-                    <option value="">
-                        -- Select an Examination --
-                    </option>
-
-                </select>
-
-
-                <br>
-                <br>
-
-
-                <button
-                    type="button"
-                    class="btn btn-success"
-                    id="addQuestionBtn">
-
-                    + Add Question
-
-                </button>
-
-
-            </div>
-
+            </button>
 
 
             <!-- QUESTION FORM -->
 
             <div
-                class="card"
                 id="questionFormContainer"
-                style="display: none;">
+                style="display: none; margin-top: 20px;">
 
+                <div class="card">
 
-                <h2 id="questionFormTitle">
-                    Add New Question
-                </h2>
+                    <h3 id="questionFormTitle">
+                        Add Question
+                    </h3>
 
+                    <br>
 
-                <br>
+                    <form id="questionForm">
 
+                        <input
+                            type="hidden"
+                            id="questionId">
 
-                <form id="questionForm">
-
-
-                    <input
-                        type="hidden"
-                        id="questionId">
-
-
-
-                    <div style="margin-bottom: 15px;">
 
                         <label for="questionText">
-
-                            <strong>
-                                Question
-                            </strong>
-
+                            Question
                         </label>
-
-
-                        <br>
-
 
                         <textarea
                             id="questionText"
-                            rows="4"
-                            placeholder="Enter question"
                             required
-                            style="width: 100%; padding: 10px; margin-top: 5px;"></textarea>
+                            style="width: 100%; padding: 10px; margin: 8px 0 15px;"></textarea>
 
-                    </div>
-
-
-
-                    <div style="margin-bottom: 15px;">
 
                         <label for="optionA">
-                            <strong>Option A</strong>
+                            Option A
                         </label>
-
-
-                        <br>
-
 
                         <input
                             type="text"
                             id="optionA"
-                            placeholder="Enter option A"
                             required
-                            style="width: 100%; padding: 10px; margin-top: 5px;">
+                            style="width: 100%; padding: 10px; margin: 8px 0 15px;">
 
-                    </div>
-
-
-
-                    <div style="margin-bottom: 15px;">
 
                         <label for="optionB">
-                            <strong>Option B</strong>
+                            Option B
                         </label>
-
-
-                        <br>
-
 
                         <input
                             type="text"
                             id="optionB"
-                            placeholder="Enter option B"
                             required
-                            style="width: 100%; padding: 10px; margin-top: 5px;">
+                            style="width: 100%; padding: 10px; margin: 8px 0 15px;">
 
-                    </div>
-
-
-
-                    <div style="margin-bottom: 15px;">
 
                         <label for="optionC">
-                            <strong>Option C</strong>
+                            Option C
                         </label>
-
-
-                        <br>
-
 
                         <input
                             type="text"
                             id="optionC"
-                            placeholder="Enter option C"
                             required
-                            style="width: 100%; padding: 10px; margin-top: 5px;">
+                            style="width: 100%; padding: 10px; margin: 8px 0 15px;">
 
-                    </div>
-
-
-
-                    <div style="margin-bottom: 15px;">
 
                         <label for="optionD">
-                            <strong>Option D</strong>
+                            Option D
                         </label>
-
-
-                        <br>
-
 
                         <input
                             type="text"
                             id="optionD"
-                            placeholder="Enter option D"
                             required
-                            style="width: 100%; padding: 10px; margin-top: 5px;">
+                            style="width: 100%; padding: 10px; margin: 8px 0 15px;">
 
-                    </div>
-
-
-
-                    <div style="margin-bottom: 15px;">
 
                         <label for="correctAnswer">
-
-                            <strong>
-                                Correct Answer
-                            </strong>
-
+                            Correct Answer
                         </label>
-
-
-                        <br>
-
 
                         <select
                             id="correctAnswer"
                             required
-                            style="width: 100%; max-width: 600px; padding: 10px; margin-top: 5px;">
+                            style="width: 100%; padding: 10px; margin: 8px 0 15px;">
 
                             <option value="">
-                                -- Select Correct Answer --
+                                Select Correct Answer
                             </option>
 
                             <option value="A">
@@ -727,290 +534,395 @@
 
                         </select>
 
-                    </div>
-
-
-
-                    <div style="margin-bottom: 15px;">
 
                         <label for="questionMarks">
-
-                            <strong>
-                                Marks
-                            </strong>
-
+                            Marks
                         </label>
-
-
-                        <br>
-
 
                         <input
                             type="number"
                             id="questionMarks"
-                            min="1"
                             value="1"
+                            min="1"
                             required
-                            style="width: 100%; max-width: 600px; padding: 10px; margin-top: 5px;">
+                            style="width: 100%; padding: 10px; margin: 8px 0 15px;">
 
-                    </div>
 
+                        <button
+                            type="submit"
+                            class="btn btn-success">
+
+                            Save Question
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-danger"
+                            id="cancelQuestionBtn">
+
+                            Cancel
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <br>
+
+
+            <!-- QUESTIONS TABLE -->
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Question
+                        </th>
+
+                        <th>
+                            Correct Answer
+                        </th>
+
+                        <th>
+                            Marks
+                        </th>
+
+                        <th>
+                            Actions
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="questionTableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         STUDENTS
+    ========================== -->
+
+    <section
+        class="container"
+        id="studentsSection"
+        style="display: none;">
+
+        <div class="card">
+
+            <button
+                class="btn btn-primary"
+                id="backFromStudentsBtn">
+
+                ← Back to Dashboard
+
+            </button>
+
+            <h1 class="page-title">
+                Students
+            </h1>
+
+
+            <button
+                class="btn btn-success"
+                id="registerStudentBtn">
+
+                + Register Student
+
+            </button>
+
+
+            <!-- STUDENT REGISTRATION FORM -->
+
+            <div
+                id="studentFormContainer"
+                style="display: none; margin-top: 20px;">
+
+                <div class="card">
+
+                    <h3>
+                        Register New Student
+                    </h3>
+
+                    <br>
+
+                    <form id="studentForm">
+
+                        <label for="studentName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentName"
+                            required
+                            style="width: 100%; padding: 10px; margin: 8px 0 15px;">
+
+
+                        <label for="studentNumber">
+                            Student ID
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentNumber"
+                            required
+                            style="width: 100%; padding: 10px; margin: 8px 0 15px;">
+
+
+                        <label for="studentEmail">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            id="studentEmail"
+                            required
+                            style="width: 100%; padding: 10px; margin: 8px 0 15px;">
+
+
+                        <label for="studentDepartment">
+                            Department
+                        </label>
+
+                        <input
+                            type="text"
+                            id="studentDepartment"
+                            required
+                            style="width: 100%; padding: 10px; margin: 8px 0 15px;">
+
+
+                        <label for="studentLevel">
+                            Level
+                        </label>
+
+                        <select
+                            id="studentLevel"
+                            required
+                            style="width: 100%; padding: 10px; margin: 8px 0 15px;">
+
+                            <option value="">
+                                Select Level
+                            </option>
+
+                            <option value="100">
+                                100 Level
+                            </option>
+
+                            <option value="200">
+                                200 Level
+                            </option>
+
+                            <option value="300">
+                                300 Level
+                            </option>
+
+                            <option value="400">
+                                400 Level
+                            </option>
+
+                            <option value="500">
+                                500 Level
+                            </option>
+
+                        </select>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-success">
+
+                            Register Student
+
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-danger"
+                            id="cancelStudentBtn">
+
+                            Cancel
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <br>
+
+
+            <!-- SEARCH -->
+
+            <input
+                type="text"
+                id="studentSearch"
+                placeholder="Search students..."
+                style="width: 100%; padding: 12px; margin-bottom: 20px;">
+
+
+            <!-- STUDENT TABLE -->
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Name
+                        </th>
+
+                        <th>
+                            Student ID
+                        </th>
+
+                        <th>
+                            Email
+                        </th>
+
+                        <th>
+                            Department
+                        </th>
+
+                        <th>
+                            Level
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                        <th>
+                            Action
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="studentsTableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXAM REGISTRATION
+    ========================== -->
+
+    <section
+        class="container"
+        id="examRegistrationSection"
+        style="display: none;">
+
+        <div class="card">
+
+            <button
+                class="btn btn-primary"
+                id="backFromRegistrationBtn">
+
+                ← Back to Dashboard
+
+            </button>
+
+            <h1 class="page-title">
+                Exam Registration
+            </h1>
+
+
+            <!-- ASSIGN EXAM -->
+
+            <div class="card">
+
+                <h3>
+                    Assign Exam to Student
+                </h3>
+
+                <br>
+
+                <form id="examRegistrationForm">
+
+
+                    <label for="registrationStudent">
+                        Select Student
+                    </label>
+
+                    <select
+                        id="registrationStudent"
+                        required
+                        style="width: 100%; padding: 10px; margin: 8px 0 20px;">
+
+                        <option value="">
+                            Select Student
+                        </option>
+
+                    </select>
+
+
+                    <label for="registrationExam">
+                        Select Exam
+                    </label>
+
+                    <select
+                        id="registrationExam"
+                        required
+                        style="width: 100%; padding: 10px; margin: 8px 0 20px;">
+
+                        <option value="">
+                            Select Exam
+                        </option>
+
+                    </select>
 
 
                     <button
                         type="submit"
                         class="btn btn-success">
 
-                        Save Question
+                        Assign Exam
 
                     </button>
-
-
-                    <button
-                        type="button"
-                        class="btn btn-danger"
-                        id="cancelQuestionBtn">
-
-                        Cancel
-
-                    </button>
-
 
                 </form>
 
-
             </div>
 
 
-
-            <!-- QUESTIONS TABLE -->
+            <!-- ASSIGNMENTS -->
 
             <div class="card">
 
-
-                <h2>
-                    Examination Questions
-                </h2>
-
+                <h3>
+                    Exam Assignments
+                </h3>
 
                 <br>
-
 
                 <table>
-
-
-                    <thead>
-
-                        <tr>
-
-                            <th>
-                                #
-                            </th>
-
-                            <th>
-                                Question
-                            </th>
-
-                            <th>
-                                Options
-                            </th>
-
-                            <th>
-                                Correct Answer
-                            </th>
-
-                            <th>
-                                Marks
-                            </th>
-
-                            <th>
-                                Actions
-                            </th>
-
-                        </tr>
-
-                    </thead>
-
-
-                    <tbody id="questionTableBody">
-
-                        <tr>
-
-                            <td colspan="6">
-
-                                Select an examination
-                                to view questions.
-
-                            </td>
-
-                        </tr>
-
-                    </tbody>
-
-
-                </table>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- ========================= -->
-        <!-- STUDENTS -->
-        <!-- ========================= -->
-
-        <section
-            id="studentsSection"
-            style="display: none;">
-
-
-            <div class="card">
-
-
-                <button
-                    type="button"
-                    class="btn btn-primary"
-                    id="backFromStudentsBtn">
-
-                    ← Back to Dashboard
-
-                </button>
-
-
-                <br>
-                <br>
-
-
-                <h2>
-                    Registered Students
-                </h2>
-
-
-                <p>
-                    View registered students.
-                </p>
-
-
-            </div>
-
-
-
-            <div class="card">
-
-
-                <input
-                    type="text"
-                    id="studentSearch"
-                    placeholder="Search students..."
-                    style="width: 100%; padding: 10px;">
-
-
-                <br>
-                <br>
-
-
-                <table>
-
-
-                    <thead>
-
-                        <tr>
-
-                            <th>
-                                ID
-                            </th>
-
-                            <th>
-                                Name
-                            </th>
-
-                            <th>
-                                Email
-                            </th>
-
-                            <th>
-                                Status
-                            </th>
-
-                        </tr>
-
-                    </thead>
-
-
-                    <tbody id="studentsTableBody">
-
-                    </tbody>
-
-
-                </table>
-
-
-            </div>
-
-
-        </section>
-
-
-
-        <!-- ========================= -->
-        <!-- RESULTS -->
-        <!-- ========================= -->
-
-        <section
-            id="resultsSection"
-            style="display: none;">
-
-
-            <div class="card">
-
-
-                <button
-                    type="button"
-                    class="btn btn-primary"
-                    id="backFromResultsBtn">
-
-                    ← Back to Dashboard
-
-                </button>
-
-
-                <br>
-                <br>
-
-
-                <h2>
-                    Examination Results
-                </h2>
-
-
-                <p>
-                    View student examination results.
-                </p>
-
-
-            </div>
-
-
-
-            <div class="card">
-
-
-                <input
-                    type="text"
-                    id="resultSearch"
-                    placeholder="Search results..."
-                    style="width: 100%; padding: 10px;">
-
-
-                <br>
-                <br>
-
-
-                <table>
-
 
                     <thead>
 
@@ -1021,60 +933,130 @@
                             </th>
 
                             <th>
+                                Student ID
+                            </th>
+
+                            <th>
                                 Exam
-                            </th>
-
-                            <th>
-                                Score
-                            </th>
-
-                            <th>
-                                Percentage
                             </th>
 
                             <th>
                                 Status
                             </th>
 
+                            <th>
+                                Action
+                            </th>
+
                         </tr>
 
                     </thead>
 
-
-                    <tbody id="resultsTableBody">
+                    <tbody id="examAssignmentsTableBody">
 
                     </tbody>
 
-
                 </table>
-
 
             </div>
 
+        </div>
 
-        </section>
-
-
-    </main>
+    </section>
 
 
+    <!-- =========================
+         RESULTS
+    ========================== -->
 
-    <!-- ========================= -->
-    <!-- FOOTER -->
-    <!-- ========================= -->
+    <section
+        class="container"
+        id="resultsSection"
+        style="display: none;">
+
+        <div class="card">
+
+            <button
+                class="btn btn-primary"
+                id="backFromResultsBtn">
+
+                ← Back to Dashboard
+
+            </button>
+
+            <h1 class="page-title">
+                Examination Results
+            </h1>
+
+
+            <input
+                type="text"
+                id="resultSearch"
+                placeholder="Search results..."
+                style="width: 100%; padding: 12px; margin-bottom: 20px;">
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Student
+                        </th>
+
+                        <th>
+                            Student ID
+                        </th>
+
+                        <th>
+                            Exam
+                        </th>
+
+                        <th>
+                            Score
+                        </th>
+
+                        <th>
+                            Percentage
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="resultsTableBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
     <footer>
 
         <p>
-            Online Examination System
+            &copy; 2026 Online Examination System
         </p>
 
     </footer>
 
 
+    <!-- JAVASCRIPT -->
 
     <script src="admin.js"></script>
-
 
 </body>
 
