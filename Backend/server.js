@@ -8,6 +8,7 @@ const authRoutes = require('./routes/authRoutes');
 const studentRoutes = require('./routes/studentRoutes');
 const examRoutes = require('./routes/examRoutes');
 const questionRoutes = require('./routes/questionRoutes');
+const registrationRoutes = require('./routes/registrationRoutes');
 
 const app = express();
 
@@ -69,7 +70,7 @@ app.use('/api/exams', examRoutes);
 
 app.use('/api/questions', questionRoutes);
 
-
+app.use('/api/registrations', registrationRoutes);
 
 // Exam routes will be added here
 // Question routes will be added here
