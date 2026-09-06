@@ -4,6 +4,9 @@ require('dotenv').config();
 
 const db = require('./config/db');
 
+const authRoutes = require('./routes/authRoutes');
+const studentRoutes = require('./routes/studentRoutes');
+
 const app = express();
 
 
@@ -56,8 +59,10 @@ app.get('/', (req, res) => {
 // ROUTES
 // =========================================
 
-// Authentication routes will be added here
-// Student routes will be added here
+app.use('/api/auth', authRoutes);
+
+app.use('/api/students', studentRoutes);
+
 // Exam routes will be added here
 // Question routes will be added here
 // Registration routes will be added here
