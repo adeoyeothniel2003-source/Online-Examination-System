@@ -6,7 +6,6 @@ const db = require('./config/db');
 
 const authRoutes = require('./routes/authRoutes');
 const studentRoutes = require('./routes/studentRoutes');
-
 const examRoutes = require('./routes/examRoutes');
 
 const app = express();
@@ -64,6 +63,8 @@ app.get('/', (req, res) => {
 app.use('/api/auth', authRoutes);
 
 app.use('/api/students', studentRoutes);
+
+app.use('/api/exams', examRoutes);
 
 // Exam routes will be added here
 // Question routes will be added here
