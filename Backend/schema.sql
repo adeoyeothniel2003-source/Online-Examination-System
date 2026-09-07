@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS users (
 
 -- =========================================
 -- EXAMS
--- =========================================
+-- ======================================'===
 
 CREATE TABLE IF NOT EXISTS exams (
     id INT AUTO_INCREMENT PRIMARY KEY,

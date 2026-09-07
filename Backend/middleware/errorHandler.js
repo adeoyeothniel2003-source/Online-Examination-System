@@ -1,5 +1,5 @@
 const { validationResult } = require('express-validator');
-
+  
 
 // =========================================
 // 404 - ROUTE NOT FOUND

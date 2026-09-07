@@ -1,4 +1,3 @@
-```javascript
 const express = require('express');
 
 const {
@@ -81,4 +80,3 @@ router.delete(
 
 
 module.exports = router;
-```

@@ -1,4 +1,4 @@
-```javascript
+
 const db = require('../config/db');
 
 
@@ -840,4 +840,4 @@ module.exports = {
     getResultById
 
 };
-```
+

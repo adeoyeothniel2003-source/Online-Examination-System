@@ -1,4 +1,3 @@
-```javascript
 const express = require('express');
 
 const {
@@ -83,4 +82,3 @@ router.get(
 
 
 module.exports = router;
-```
