@@ -1,227 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Examination Page</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examination — Online Examination System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
-
 <body>
-
-    <!-- =========================================
-         EXAM CONTAINER
-    ========================================= -->
 
     <div class="exam-container">
 
-
-        <!-- =========================================
-             EXAM HEADER
-        ========================================= -->
-
         <header class="exam-header">
-
-            <h1 id="examTitle">
-                Examination
-            </h1>
-
-            <p class="student-name" id="studentName">
-                Student: Loading...
-            </p>
-
+            <div>
+                <h1 id="examTitle">Examination</h1>
+                <p class="student-name" id="studentName">Student: Loading…</p>
+            </div>
         </header>
-
-
-        <!-- =========================================
-             EXAM BODY
-        ========================================= -->
 
         <main class="exam-body">
 
-
-            <!-- =========================================
-                 QUESTION COUNTER
-            ========================================= -->
-
             <div class="question-counter">
-
-                <p>
-                    Question 1 of 1
-                </p>
-
+                <p>Question 1 of 1</p>
             </div>
-
-
-            <!-- =========================================
-                 QUESTION
-            ========================================= -->
 
             <section class="question-block">
-
-                <p class="question-text">
-                    Loading question...
-                </p>
-
-
-                <!-- =========================================
-                     ANSWER OPTIONS
-                ========================================= -->
-
-                <form class="options">
-
-                </form>
-
+                <p class="question-text">Loading question…</p>
+                <form class="options"></form>
             </section>
 
-
-            <!-- =========================================
-                 PREVIOUS / NEXT BUTTONS
-            ========================================= -->
-
             <div class="exam-navigation">
-
-                <button
-                    type="button"
-                    class="btn-prev"
-                >
-                    Previous
-                </button>
-
-                <button
-                    type="button"
-                    class="btn-next"
-                >
-                    Next
-                </button>
-
+                <button type="button" class="btn-prev">← Previous</button>
+                <button type="button" class="btn-next">Next →</button>
             </div>
 
-
-            <!-- =========================================
-                 QUESTION NAVIGATOR
-            ========================================= -->
-
-            <nav class="question-navigator">
-
-            </nav>
-
-
-            <!-- =========================================
-                 SUBMIT EXAM
-            ========================================= -->
+            <div class="navigator-wrap">
+                <div class="navigator-legend" aria-hidden="true">
+                    <span><i class="dot dot-current"></i> Current</span>
+                    <span><i class="dot dot-answered"></i> Answered</span>
+                    <span><i class="dot dot-unanswered"></i> Unanswered</span>
+                </div>
+                <nav class="question-navigator" aria-label="Question navigator"></nav>
+            </div>
 
             <div class="submit-wrapper">
-
-                <button
-                    type="button"
-                    class="btn-submit"
-                >
-                    Submit Exam
-                </button>
-
+                <button type="button" class="btn-submit">Submit Exam</button>
             </div>
 
         </main>
 
-
-        <!-- =========================================
-             TIMER
-        ========================================= -->
-
         <footer class="exam-timer-footer">
-
             <div class="timer">
-
-                <span class="timer-label">
-                    Time Remaining
-                </span>
-
-                <span class="timer-value">
-                    00:00
-                </span>
-
+                <span class="timer-label">Time Remaining</span>
+                <span class="timer-value">00:00</span>
             </div>
-
         </footer>
 
     </div>
 
-
-    <!-- =========================================
-         LOAD STUDENT INFORMATION
-    ========================================= -->
-
     <script>
+        const token = localStorage.getItem('token');
+        if (!token) { window.location.href = 'login.html'; }
 
-        // =========================================
-        // CHECK LOGIN
-        // =========================================
-
-        const token =
-            localStorage.getItem('token');
-
-        if (!token) {
-
-            window.location.href =
-                'login.html';
-
-        }
-
-
-        // =========================================
-        // DISPLAY STUDENT NAME
-        // =========================================
-
-        const savedUser =
-            localStorage.getItem('user');
-
+        const savedUser = localStorage.getItem('user');
         if (savedUser) {
-
             try {
-
-                const user =
-                    JSON.parse(savedUser);
-
-                if (
-                    user &&
-                    user.role === 'student'
-                ) {
-
-                    document
-                        .getElementById('studentName')
-                        .textContent =
-                        `Student: ${user.name}`;
-
+                const user = JSON.parse(savedUser);
+                if (user && user.role === 'student') {
+                    document.getElementById('studentName').textContent = `Student: ${user.name}`;
                 }
-
             } catch (error) {
-
-                console.error(
-                    'Unable to read student information:',
-                    error
-                );
-
+                console.error('Unable to read student information:', error);
             }
-
         }
-
     </script>
 
-
-    <!-- =========================================
-         EXAM JAVASCRIPT
-    ========================================= -->
-
     <script src="questions.js"></script>
+    <script>
+        // Timer warning states — driven by MutationObserver on the timer value.
+        (function () {
+            var timerEl = document.querySelector('.timer');
+            var valueEl = document.querySelector('.timer-value');
+            if (!timerEl || !valueEl) return;
 
+            function parse(str) {
+                var m = /^(\d+):(\d+)$/.exec((str || '').trim());
+                return m ? (+m[1]) * 60 + (+m[2]) : null;
+            }
+            function update() {
+                var s = parse(valueEl.textContent);
+                if (s === null) return;
+                timerEl.classList.toggle('timer-danger', s <= 60);
+                timerEl.classList.toggle('timer-warning', s > 60 && s <= 5 * 60);
+            }
+            new MutationObserver(update).observe(valueEl, { childList: true, characterData: true, subtree: true });
+            update();
+        })();
+    </script>
 </body>
-
 </html>

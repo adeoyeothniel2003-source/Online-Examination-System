@@ -1,616 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Student Dashboard</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard — Online Examination System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
-
 </head>
-
 <body>
 
-    <!-- =========================================
-         NAVIGATION BAR
-    ========================================= -->
-
     <nav class="navbar">
-
-        <div class="logo">
-            Online Examination System
-        </div>
-
-        <ul class="nav-links">
-
-            <li>
-                <a href="index.html">
-                    Home
-                </a>
-            </li>
-
-            <li>
-                <a href="dashboard.html">
-                    Dashboard
-                </a>
-            </li>
-
-            <li>
-                <a href="#" id="logoutLink">
-                    Logout
-                </a>
-            </li>
-
+        <div class="logo">Obafemi Awolowo University</div>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primaryNav" aria-expanded="false"><span class="nav-toggle-bars"><i></i></span></button>
+        <ul class="nav-links" id="primaryNav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="#" id="logoutLink">Logout</a></li>
         </ul>
-
     </nav>
-
-
-    <!-- =========================================
-         MAIN DASHBOARD
-    ========================================= -->
 
     <main class="container">
 
-        <!-- =========================================
-             WELCOME SECTION
-        ========================================= -->
-
         <div class="card">
-
-            <h1 class="page-title">
-                Student Dashboard
-            </h1>
-
-            <h2 id="welcomeMessage">
-                Welcome
-            </h2>
-
-            <p>
-                From your dashboard, you can view your student
-                information and examinations assigned to you.
+            <h1 class="page-title">Student Dashboard</h1>
+            <h2 id="welcomeMessage">Welcome</h2>
+            <p class="text-muted">
+                Review your student information and take examinations that have
+                been assigned to you.
             </p>
-
         </div>
 
-
-        <!-- =========================================
-             STUDENT INFORMATION
-        ========================================= -->
-
         <div class="card">
-
-            <h2>
-                Student Information
-            </h2>
-
-            <br>
-
-            <p>
-                <strong>Name:</strong>
-                <span id="studentName">
-                    Loading...
-                </span>
-            </p>
-
-            <p>
-                <strong>Student ID:</strong>
-                <span id="studentId">
-                    Loading...
-                </span>
-            </p>
-
-            <p>
-                <strong>Email:</strong>
-                <span id="studentEmail">
-                    Loading...
-                </span>
-            </p>
-
-            <p>
-                <strong>Department:</strong>
-                <span id="studentDepartment">
-                    Loading...
-                </span>
-            </p>
-
-            <p>
-                <strong>Level:</strong>
-                <span id="studentLevel">
-                    Loading...
-                </span>
-            </p>
-
+            <h2>Student Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <strong>Name</strong>
+                    <span id="studentName">Loading…</span>
+                </div>
+                <div class="info-item">
+                    <strong>Student ID</strong>
+                    <span id="studentId">Loading…</span>
+                </div>
+                <div class="info-item">
+                    <strong>Email</strong>
+                    <span id="studentEmail">Loading…</span>
+                </div>
+                <div class="info-item">
+                    <strong>Department</strong>
+                    <span id="studentDepartment">Loading…</span>
+                </div>
+                <div class="info-item">
+                    <strong>Level</strong>
+                    <span id="studentLevel">Loading…</span>
+                </div>
+            </div>
         </div>
 
-
-        <!-- =========================================
-             ASSIGNED EXAMINATIONS
-        ========================================= -->
-
         <div class="card">
-
-            <h2>
-                Available Examinations
-            </h2>
-
-            <br>
-
-            <p id="examMessage">
-                Loading examinations...
+            <h2>Available Examinations</h2>
+            <p id="examMessage" class="text-muted" style="margin-top: 6px; margin-bottom: var(--space-4);">
+                Loading examinations…
             </p>
-
-            <br>
 
             <table id="examTable">
-
                 <thead>
-
                     <tr>
-
-                        <th>
-                            Examination
-                        </th>
-
-                        <th>
-                            Description
-                        </th>
-
-                        <th>
-                            Duration
-                        </th>
-
-                        <th>
-                            Status
-                        </th>
-
-                        <th>
-                            Action
-                        </th>
-
+                        <th>Examination</th>
+                        <th>Description</th>
+                        <th>Duration</th>
+                        <th>Status</th>
+                        <th>Action</th>
                     </tr>
-
                 </thead>
-
-                <tbody id="examTableBody">
-
-                </tbody>
-
+                <tbody id="examTableBody"></tbody>
             </table>
-
         </div>
 
-
-        <!-- =========================================
-             LOGOUT BUTTON
-        ========================================= -->
-
-        <div style="text-align: center; margin-top: 25px;">
-
-            <button
-                type="button"
-                class="btn btn-danger"
-                id="logoutButton"
-            >
-                Logout
-            </button>
-
+        <div style="text-align: right; margin-top: var(--space-5);">
+            <button type="button" class="btn btn-danger" id="logoutButton">Logout</button>
         </div>
 
     </main>
 
+    <footer data-standard-footer></footer>
 
-    <!-- =========================================
-         FOOTER
-    ========================================= -->
-
-    <footer>
-
-        <p>
-            Online Examination System
-        </p>
-
-    </footer>
-
-
-    <!-- =========================================
-         DASHBOARD JAVASCRIPT
-    ========================================= -->
-
+    <script src="js/ui.js"></script>
     <script>
-
-        // =========================================
-        // LOAD STUDENT INFORMATION
-        // =========================================
-
         async function loadStudentInformation(token) {
-
-            const response =
-                await fetch(
-                    'https://online-examination-backend-mr8j.onrender.com/api/auth/me',
-                    {
-                        headers: {
-                            'Authorization':
-                                `Bearer ${token}`
-                        }
-                    }
-                );
-
-            const data =
-                await response.json();
-
+            const response = await fetch(
+                'https://online-examination-backend-mr8j.onrender.com/api/auth/me',
+                { headers: { 'Authorization': `Bearer ${token}` } }
+            );
+            const data = await response.json();
             if (!response.ok) {
-
-                throw new Error(
-                    data.message ||
-                    'Unable to load student information.'
-                );
+                throw new Error(data.message || 'Unable to load student information.');
             }
 
-            const student =
-                data.user;
-
-
-            // =========================================
-            // DISPLAY STUDENT INFORMATION
-            // =========================================
-
-            document
-                .getElementById('welcomeMessage')
-                .textContent =
-                `Welcome, ${student.name}`;
-
-            document
-                .getElementById('studentName')
-                .textContent =
-                student.name || 'Not available';
-
-            document
-                .getElementById('studentId')
-                .textContent =
-                student.student_id || 'Not available';
-
-            document
-                .getElementById('studentEmail')
-                .textContent =
-                student.email || 'Not available';
-
-            document
-                .getElementById('studentDepartment')
-                .textContent =
-                student.department || 'Not available';
-
-            document
-                .getElementById('studentLevel')
-                .textContent =
-                student.level || 'Not available';
+            const student = data.user;
+            document.getElementById('welcomeMessage').textContent = `Welcome, ${student.name}`;
+            document.getElementById('studentName').textContent = student.name || 'Not available';
+            document.getElementById('studentId').textContent = student.student_id || 'Not available';
+            document.getElementById('studentEmail').textContent = student.email || 'Not available';
+            document.getElementById('studentDepartment').textContent = student.department || 'Not available';
+            document.getElementById('studentLevel').textContent = student.level || 'Not available';
         }
-
-
-        // =========================================
-        // LOAD ASSIGNED EXAMS
-        // =========================================
 
         async function loadAssignedExams(token) {
-
-            const response =
-                await fetch(
-                    'https://online-examination-backend-mr8j.onrender.com/api/registrations/my-exams',
-                    {
-                        headers: {
-                            'Authorization':
-                                `Bearer ${token}`
-                        }
-                    }
-                );
-
-            const data =
-                await response.json();
-
+            const response = await fetch(
+                'https://online-examination-backend-mr8j.onrender.com/api/registrations/my-exams',
+                { headers: { 'Authorization': `Bearer ${token}` } }
+            );
+            const data = await response.json();
             if (!response.ok) {
-
-                throw new Error(
-                    data.message ||
-                    'Unable to load examinations.'
-                );
+                throw new Error(data.message || 'Unable to load examinations.');
             }
 
-
-            const examTableBody =
-                document.getElementById(
-                    'examTableBody'
-                );
-
-            const examMessage =
-                document.getElementById(
-                    'examMessage'
-                );
-
-
+            const examTableBody = document.getElementById('examTableBody');
+            const examMessage = document.getElementById('examMessage');
             examTableBody.innerHTML = '';
 
-
-            // =========================================
-            // NO EXAMS
-            // =========================================
-
-            if (
-                !data.registrations ||
-                data.registrations.length === 0
-            ) {
-
-                examMessage.textContent =
-                    'No examinations have been assigned to you yet.';
-
+            if (!data.registrations || data.registrations.length === 0) {
+                examMessage.textContent = 'No examinations have been assigned to you yet.';
+                const row = document.createElement('tr');
+                const cell = document.createElement('td');
+                cell.colSpan = 5;
+                cell.textContent = 'You have no assigned examinations at the moment.';
+                row.appendChild(cell);
+                examTableBody.appendChild(row);
                 return;
             }
 
+            examMessage.textContent = 'These are the examinations currently assigned to you.';
 
-            examMessage.textContent =
-                'These are the examinations assigned to you.';
+            data.registrations.forEach(function (registration) {
+                const row = document.createElement('tr');
 
+                const examNameCell = document.createElement('td');
+                examNameCell.textContent = registration.title;
+                const strong = document.createElement('strong');
+                strong.textContent = registration.title;
+                examNameCell.textContent = '';
+                examNameCell.appendChild(strong);
 
-            // =========================================
-            // DISPLAY EXAMS
-            // =========================================
+                const descriptionCell = document.createElement('td');
+                descriptionCell.textContent = registration.description || 'No description';
 
-            data.registrations.forEach(
-                function(registration) {
+                const durationCell = document.createElement('td');
+                durationCell.textContent = `${registration.duration_minutes} minutes`;
 
-                    const row =
-                        document.createElement('tr');
+                const statusCell = document.createElement('td');
+                const statusBadge = document.createElement('span');
+                statusBadge.className = 'status';
+                var s = (registration.registration_status || '').toLowerCase();
+                if (s === 'completed') statusBadge.classList.add('status-success');
+                else if (s === 'pending') statusBadge.classList.add('status-warning');
+                else statusBadge.classList.add('status-info');
+                statusBadge.textContent = registration.registration_status;
+                statusCell.appendChild(statusBadge);
 
-
-                    // =========================================
-                    // EXAM NAME
-                    // =========================================
-
-                    const examNameCell =
-                        document.createElement('td');
-
-                    examNameCell.textContent =
-                        registration.title;
-
-
-                    // =========================================
-                    // DESCRIPTION
-                    // =========================================
-
-                    const descriptionCell =
-                        document.createElement('td');
-
-                    descriptionCell.textContent =
-                        registration.description ||
-                        'No description';
-
-
-                    // =========================================
-                    // DURATION
-                    // =========================================
-
-                    const durationCell =
-                        document.createElement('td');
-
-                    durationCell.textContent =
-                        `${registration.duration_minutes} Minutes`;
-
-
-                    // =========================================
-                    // REGISTRATION STATUS
-                    // =========================================
-
-                    const statusCell =
-                        document.createElement('td');
-
-                    statusCell.textContent =
-                        registration.registration_status;
-
-
-                    // =========================================
-                    // ACTION
-                    // =========================================
-
-                    const actionCell =
-                        document.createElement('td');
-
-
-                    // =========================================
-                    // CHECK EXAM STATUS
-                    // =========================================
-
-                    if (
-                        registration.exam_status !==
-                        'published'
-                    ) {
-
-                        actionCell.textContent =
-                            'Unavailable';
-
-                    } else if (
-                        registration.registration_status ===
-                        'completed'
-                    ) {
-
-                        actionCell.textContent =
-                            'Completed';
-
-                    } else {
-
-                        const startButton =
-                            document.createElement('a');
-
-                        startButton.href =
-                            `exam.html?examId=${registration.exam_id}`;
-
-                        startButton.className =
-                            'btn btn-success';
-
-                        startButton.textContent =
-                            'Start Exam';
-
-                        actionCell.appendChild(
-                            startButton
-                        );
-                    }
-
-
-                    row.appendChild(
-                        examNameCell
-                    );
-
-                    row.appendChild(
-                        descriptionCell
-                    );
-
-                    row.appendChild(
-                        durationCell
-                    );
-
-                    row.appendChild(
-                        statusCell
-                    );
-
-                    row.appendChild(
-                        actionCell
-                    );
-
-
-                    examTableBody.appendChild(
-                        row
-                    );
-
+                const actionCell = document.createElement('td');
+                if (registration.exam_status !== 'published') {
+                    const muted = document.createElement('span');
+                    muted.className = 'text-muted';
+                    muted.textContent = 'Unavailable';
+                    actionCell.appendChild(muted);
+                } else if (registration.registration_status === 'completed') {
+                    const done = document.createElement('span');
+                    done.className = 'status status-success';
+                    done.textContent = 'Completed';
+                    actionCell.appendChild(done);
+                } else {
+                    const startButton = document.createElement('a');
+                    startButton.href = `exam.html?examId=${registration.exam_id}`;
+                    startButton.className = 'btn btn-success';
+                    startButton.textContent = 'Start exam';
+                    actionCell.appendChild(startButton);
                 }
-            );
+
+                row.appendChild(examNameCell);
+                row.appendChild(descriptionCell);
+                row.appendChild(durationCell);
+                row.appendChild(statusCell);
+                row.appendChild(actionCell);
+                examTableBody.appendChild(row);
+            });
         }
-
-
-        // =========================================
-        // LOGOUT
-        // =========================================
 
         function logout() {
-
-            localStorage.removeItem(
-                'token'
-            );
-
-            localStorage.removeItem(
-                'user'
-            );
-
-            window.location.href =
-                'login.html';
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            window.location.href = 'login.html';
         }
-
-
-        // =========================================
-        // START DASHBOARD
-        // =========================================
 
         async function loadDashboard() {
-
-            const token =
-                localStorage.getItem(
-                    'token'
-                );
-
-
-            // =========================================
-            // CHECK LOGIN
-            // =========================================
-
-            if (!token) {
-
-                window.location.href =
-                    'login.html';
-
-                return;
-            }
-
+            const token = localStorage.getItem('token');
+            if (!token) { window.location.href = 'login.html'; return; }
 
             try {
-
-                await loadStudentInformation(
-                    token
-                );
-
-                await loadAssignedExams(
-                    token
-                );
-
+                await loadStudentInformation(token);
+                await loadAssignedExams(token);
             } catch (error) {
-
-                console.error(
-                    'Dashboard error:',
-                    error
-                );
-
-                alert(
-                    error.message ||
-                    'Unable to load dashboard.'
-                );
-
-
-                // =========================================
-                // INVALID LOGIN
-                // =========================================
-
-                if (
-                    error.message.includes(
-                        'Authentication'
-                    ) ||
-                    error.message.includes(
-                        'token'
-                    )
-                ) {
-
+                console.error('Dashboard error:', error);
+                alert(error.message || 'Unable to load dashboard.');
+                if (error.message.includes('Authentication') || error.message.includes('token')) {
                     logout();
                 }
             }
         }
 
-
-        // =========================================
-        // LOGOUT EVENTS
-        // =========================================
-
-        document
-            .getElementById('logoutLink')
-            .addEventListener(
-                'click',
-                function(event) {
-
-                    event.preventDefault();
-
-                    logout();
-                }
-            );
-
-
-        document
-            .getElementById('logoutButton')
-            .addEventListener(
-                'click',
-                function() {
-
-                    logout();
-                }
-            );
-
-
-        // =========================================
-        // LOAD DASHBOARD
-        // =========================================
+        document.getElementById('logoutLink').addEventListener('click', function (event) {
+            event.preventDefault(); logout();
+        });
+        document.getElementById('logoutButton').addEventListener('click', logout);
 
         loadDashboard();
-
     </script>
-
 </body>
-
 </html>

@@ -10,12 +10,13 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Admin Dashboard</title>
+    <title>Admin Dashboard — Online Examination System</title>
 
-    <link
-        rel="stylesheet"
-        href="css/style.css"
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -29,10 +30,12 @@
     <nav class="navbar">
 
         <div class="logo">
-            Online Examination System
+            Obafemi Awolowo University
         </div>
 
-        <ul class="nav-links">
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primaryNav" aria-expanded="false"><span class="nav-toggle-bars"><i></i></span></button>
+
+        <ul class="nav-links" id="primaryNav">
 
             <li>
                 <a
@@ -327,7 +330,6 @@
                             type="text"
                             id="examTitle"
                             required
-                            style="width: 100%; padding: 10px; margin: 8px 0 15px;"
                         >
 
 
@@ -338,7 +340,6 @@
                         <textarea
                             id="examDescription"
                             required
-                            style="width: 100%; padding: 10px; margin: 8px 0 15px;"
                         ></textarea>
 
 
@@ -351,7 +352,6 @@
                             id="examDuration"
                             min="1"
                             required
-                            style="width: 100%; padding: 10px; margin: 8px 0 15px;"
                         >
 
 
@@ -455,7 +455,6 @@
 
             <select
                 id="questionExamSelect"
-                style="width: 100%; padding: 10px; margin: 10px 0 20px;"
             >
 
                 <option value="">
@@ -505,7 +504,6 @@
                         <textarea
                             id="questionText"
                             required
-                            style="width: 100%; padding: 10px; margin: 8px 0 15px;"
                         ></textarea>
 
 
@@ -517,7 +515,6 @@
                             type="text"
                             id="optionA"
                             required
-                            style="width: 100%; padding: 10px; margin: 8px 0 15px;"
                         >
 
 
@@ -529,7 +526,6 @@
                             type="text"
                             id="optionB"
                             required
-                            style="width: 100%; padding: 10px; margin: 8px 0 15px;"
                         >
 
 
@@ -541,7 +537,6 @@
                             type="text"
                             id="optionC"
                             required
-                            style="width: 100%; padding: 10px; margin: 8px 0 15px;"
                         >
 
 
@@ -553,7 +548,6 @@
                             type="text"
                             id="optionD"
                             required
-                            style="width: 100%; padding: 10px; margin: 8px 0 15px;"
                         >
 
 
@@ -564,7 +558,6 @@
                         <select
                             id="correctAnswer"
                             required
-                            style="width: 100%; padding: 10px; margin: 8px 0 15px;"
                         >
 
                             <option value="">
@@ -600,7 +593,6 @@
                             value="1"
                             min="1"
                             required
-                            style="width: 100%; padding: 10px; margin: 8px 0 15px;"
                         >
 
 
@@ -729,7 +721,6 @@
                             type="text"
                             id="studentName"
                             required
-                            style="width: 100%; padding: 10px; margin: 8px 0 15px;"
                         >
 
 
@@ -741,7 +732,6 @@
                             type="text"
                             id="studentNumber"
                             required
-                            style="width: 100%; padding: 10px; margin: 8px 0 15px;"
                         >
 
 
@@ -753,7 +743,6 @@
                             type="email"
                             id="studentEmail"
                             required
-                            style="width: 100%; padding: 10px; margin: 8px 0 15px;"
                         >
 
 
@@ -767,7 +756,6 @@
                             placeholder="Create student password"
                             minlength="6"
                             required
-                            style="width: 100%; padding: 10px; margin: 8px 0 15px;"
                         >
 
 
@@ -779,7 +767,6 @@
                             type="text"
                             id="studentDepartment"
                             required
-                            style="width: 100%; padding: 10px; margin: 8px 0 15px;"
                         >
 
 
@@ -790,7 +777,6 @@
                         <select
                             id="studentLevel"
                             required
-                            style="width: 100%; padding: 10px; margin: 8px 0 15px;"
                         >
 
                             <option value="">
@@ -853,7 +839,6 @@
                 type="text"
                 id="studentSearch"
                 placeholder="Search students..."
-                style="width: 100%; padding: 12px; margin-bottom: 20px;"
             >
 
 
@@ -956,7 +941,6 @@
                     <select
                         id="registrationStudent"
                         required
-                        style="width: 100%; padding: 10px; margin: 8px 0 20px;"
                     >
 
                         <option value="">
@@ -973,7 +957,6 @@
                     <select
                         id="registrationExam"
                         required
-                        style="width: 100%; padding: 10px; margin: 8px 0 20px;"
                     >
 
                         <option value="">
@@ -1078,7 +1061,6 @@
                 type="text"
                 id="resultSearch"
                 placeholder="Search results..."
-                style="width: 100%; padding: 12px; margin-bottom: 20px;"
             >
 
 
@@ -1131,19 +1113,9 @@
          FOOTER
     ========================================= -->
 
-    <footer>
+    <footer data-standard-footer></footer>
 
-        <p>
-            &copy; 2026 Online Examination System
-        </p>
-
-    </footer>
-
-
-    <!-- =========================================
-         ADMIN JAVASCRIPT
-    ========================================= -->
-
+    <script src="js/ui.js"></script>
     <script src="admin.js"></script>
 
 </body>
