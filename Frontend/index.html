@@ -1,79 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Online Examination System</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Examination System — Obafemi Awolowo University</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <nav class="navbar">
-
-        <div class="logo">
-            Obafemi Awolowo University
-        </div>
-
-        <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="login.html">Student Login</a></li>
-    <li><a href="admin-login.html">Admin Login</a></li>
-</ul>
-
+        <div class="logo">Obafemi Awolowo University</div>
+        <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primaryNav" aria-expanded="false"><span class="nav-toggle-bars"><i></i></span></button>
+        <ul class="nav-links" id="primaryNav">
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="login.html">Student Login</a></li>
+            <li><a href="admin-login.html">Admin Login</a></li>
+        </ul>
     </nav>
 
     <main class="container">
 
-        <div class="card" style="text-align: center;">
-
-            <h1 class="page-title">
-                Welcome to the Online Examination System
-            </h1>
-
-            <br>
-
-            <a href="login.html" class="btn btn-primary">
-                Start Examination
-            </a>
-
-        </div>
-
-        <div class="card">
-
-            <h2>INSTRUCTIONS</h2>
-
-            <br>
-
+        <section class="hero">
+            <h1>Online Examination System</h1>
             <p>
-                1. Login to your account.
+                A secure, modern examination platform for Obafemi Awolowo University.
+                Sign in with your student credentials to take assigned examinations,
+                or continue as an administrator to manage assessments.
             </p>
+            <a href="login.html" class="btn">Start Examination</a>
+        </section>
 
-            <p>
-                2. Select an available examination.
-            </p>
-
-            <p>
-                3. Answer the examination questions.
-            </p>
-
-            <p>
-                4. Submit your examination.
-            </p>
-
-        </div>
+        <section class="card">
+            <h2>How it works</h2>
+            <p class="text-muted">Follow these four steps to complete your examination.</p>
+            <ol class="instructions-list">
+                <li><strong>Log in</strong><br><span class="text-muted">Use your student email and password to access your dashboard.</span></li>
+                <li><strong>Select an exam</strong><br><span class="text-muted">Choose from the examinations assigned to you.</span></li>
+                <li><strong>Answer questions</strong><br><span class="text-muted">Work through the questions within the allotted time.</span></li>
+                <li><strong>Submit</strong><br><span class="text-muted">Review your answers and submit before the timer runs out.</span></li>
+            </ol>
+        </section>
 
     </main>
 
-    <footer>
-        <p>Online Examination System</p>
-    </footer>
+    <footer data-standard-footer></footer>
+
+    <script src="js/ui.js"></script>
 
 </body>
-
 </html>
